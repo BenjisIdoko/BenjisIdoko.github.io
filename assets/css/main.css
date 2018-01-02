@@ -217,7 +217,16 @@ p:last-child {
 	}
 	
 	
-	
+a>div { display: none; }
+a:hover>div { display: block; }
+
+.imgx{
+	width: 300px;
+	height: 200px;
+}
+ul li{
+	display: inline;
+}
 	
 /*  --------------------------------------------
 
