@@ -1751,7 +1751,6 @@ html a.social-link:hover:before {
 @media screen and (max-width:900px) {
     body {
         font-size: 19px;
-        background: #fafafa;
         padding: 20px;
         float: left;
         width: 100%;
