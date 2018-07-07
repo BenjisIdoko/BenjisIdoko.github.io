@@ -288,7 +288,8 @@ p:last-child {
 /* MASKED DARK */
 
 .is-masked-dark .media:after {
-    background: rgba(35, 35, 35, 0.4);
+    /* background: rgba(35, 35, 35, 0.4); */
+    background: rgba(27, 27, 27, 0.829);
 }
 
 
