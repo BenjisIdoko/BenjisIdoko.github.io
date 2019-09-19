@@ -94,17 +94,28 @@ a {
 .project1 {
     width: 100%;
     height: auto;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#f4b93d), to(#f4b93d));
-    background-image: linear-gradient(180deg, #f4b93d, #f4b93d);
+    /* background-image: -webkit-gradient(linear, left top, left bottom, from(#f4b93d), to(#f4b93d));
+    background-image: linear-gradient(180deg, #f4b93d, #f4b93d); */
     padding-top: 47px;
 }
 
-.bg1 {
-    background-image: linear-gradient(180deg, #f4b93d, #f4b93d);
+.bg-uba {
+    /* background-image: linear-gradient(180deg, #f4b93d, #f4b93d); */
+    background-color: #D6374C;
 }
 
-.bg2 {
+.bg-smart {
     background-image: linear-gradient(rgb(105, 96, 242) 9.375%, rgb(126, 119, 238) 95.3125%);
+}
+.bg-ngwa{
+    background-color: #171410;
+}
+.bg-white{
+    background-color: #9ca7c4;  
+}
+.bg-gray{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#9CA7C4), to(#b9c2db));
+    background-image: linear-gradient(180deg, #9CA7C4, #B9C2DB);
 }
 
 img {
