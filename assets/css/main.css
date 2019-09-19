@@ -14,9 +14,13 @@ body {
 
 a {
     text-decoration: none;
-    color: transparent;
+    color: #1d3558;
     cursor: pointer;
+    font-weight: bold;
 }
+/* .link a{
+    color: #1d3558;
+} */
 
 .wrapper {
     /* display: grid;
@@ -274,3 +278,24 @@ img {
         clear: none;
     }
 }
+
+/* example 3 */
+.ex3 .hide3 {
+    width: 50%;
+    display: table;
+    height: 150px; /* any arbitrary height but best at the minimum initial height you would want. */
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.5s ease;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+  .inner3 {
+    padding: 10px;
+  }
+  .ex3 input[type="checkbox"]:checked + .hide3 {
+    height: 0;
+    opacity: 0;
+    display: block;
+  }
+  
