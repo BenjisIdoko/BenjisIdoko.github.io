@@ -7,7 +7,7 @@ body {
     padding: 0px;
     font-family: 'montserrat';
     width: 100%;
-    color: white;
+    color: #646464;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -70,6 +70,7 @@ a {
     margin-top: 45px;
     margin-bottom: 65px;
     text-align: center;
+    color: #646464;
 }
 
 /* Main section */
