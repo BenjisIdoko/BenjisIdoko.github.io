@@ -137,6 +137,11 @@ img {
 .file-img {
     width: 35%;
 }
+.file-img-2{
+    width: 90%; 
+    padding-left: 15px; 
+    box-shadow: 17 23 11 #c53434;
+}
 
 @media (max-width:766px) {
     .file-img {
@@ -195,8 +200,8 @@ img {
 }
 
 .links-blk {
-    margin-top: 20px;
-    padding-bottom: 20px;
+    margin-top: 30px;
+    padding-bottom: 30px;
 }
 
 .social-h {
