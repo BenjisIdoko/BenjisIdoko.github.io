@@ -27,10 +27,7 @@ a {
     text-decoration: none;
 }
 
-.wrapper {
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr) ); */
-}
+
 
 /* Sidebar */
 @media (min-width:479px) {
@@ -120,11 +117,15 @@ a {
     background-color: #171410;
 }
 .bg-white{
-    background-color: #9ca7c4;  
+    background-color: #f9f9f9;  
 }
 .bg-gray{
     background-image: -webkit-gradient(linear, left top, left bottom, from(#9CA7C4), to(#b9c2db));
     background-image: linear-gradient(180deg, #9CA7C4, #B9C2DB);
+}
+.bg-cesa{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#DA5A1F), to(#EF7623));
+    background-image: linear-gradient(180deg, #DA5A15, #EF7623);
 }
 
 img {
@@ -138,16 +139,12 @@ img {
     width: 35%;
 }
 .file-img-2{
-    width: 90%; 
+    width: 62%; 
     padding-left: 15px; 
     box-shadow: 17 23 11 #c53434;
 }
 
-@media (max-width:766px) {
-    .file-img {
-        width: 50%;
-    }
-}
+
 
 .block1 {
     /* display: block; */
@@ -208,6 +205,9 @@ img {
     color: #646464;
     margin-right: 26px;
 }
+.icon:hover{
+background-color: #fefefe;
+}
 
 .contact-btn {
     text-align: center;
@@ -264,6 +264,26 @@ img {
         width: 100%;
     }
 }
+@media (max-width: 479px) {
+    .mydesc {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .mydesc {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .mydesc {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 
 /* PROJECTS */
 @media (max-width: 479px) {
@@ -288,24 +308,22 @@ img {
         clear: none;
     }
 }
-
-/* example 3 */
-.ex3 .hide3 {
-    width: 50%;
-    display: table;
-    height: 150px; /* any arbitrary height but best at the minimum initial height you would want. */
-    overflow: hidden;
-    background: #fff;
-    transition: all 0.5s ease;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
-  }
-  .inner3 {
-    padding: 10px;
-  }
-  .ex3 input[type="checkbox"]:checked + .hide3 {
-    height: 0;
-    opacity: 0;
-    display: block;
-  }
-  
+/* IMAGE */
+/* @media (max-width:479px) {
+    .file-img {
+        width: 79%;
+        padding-right: 20px;
+    }
+}
+@media (max-width:766px) {
+    .file-img {
+        width: 79%;
+        padding-right: 20px;
+    }
+}
+@media (max-width:991px) {
+    .file-img {
+        width: 79%;
+        padding-right: 20px;
+    }
+} */
