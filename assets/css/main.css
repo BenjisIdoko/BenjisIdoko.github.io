@@ -119,6 +119,10 @@ a {
 .bg-white{
     background-color: #fafafa;  
 }
+.bg-blue{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#A8E7FC), to(#4360b1));
+    background-image: linear-gradient(180deg, #A8E7FC, (#4360b1)); 
+}
 .bg-gray{
     background-image: -webkit-gradient(linear, left top, left bottom, from(#9CA7C4), to(#b9c2db));
     background-image: linear-gradient(180deg, #9CA7C4, #B9C2DB);
