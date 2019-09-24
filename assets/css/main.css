@@ -206,7 +206,7 @@ img {
     margin-right: 26px;
 }
 .icon:hover{
-background-color: #fefefe;
+opacity: 0.2;
 }
 
 .contact-btn {
