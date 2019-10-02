@@ -30,21 +30,6 @@ a {
 
 
 /* Sidebar */
-@media (min-width:479px) {
-    .dside {
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        right: 522px;
-        bottom: 0px;
-        z-index: 0;
-        width: 37%;
-        height: 100%;
-        padding: 75px 20px 50px;
-        margin-left: 0;
-        background: #f9f9f9;
-    }
-}
 
 /* .davatar {
 } */
@@ -219,6 +204,21 @@ opacity: 0.2;
 
 /* MEDIA QUERIES */
 /* ABOUT CONTAINER (DSIDE) */
+@media (min-width:479px) {
+    .dside {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        right: 522px;
+        bottom: 0px;
+        z-index: 0;
+        width: 37%;
+        height: 100%;
+        padding: 75px 20px 50px;
+        margin-left: 0;
+        background: #f9f9f9;
+    }
+} 
 @media (max-width: 479px) {
     .dside {
         position: static;
