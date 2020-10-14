@@ -18,6 +18,7 @@ a {
     cursor: pointer;
 
 }
+
 .link {
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
@@ -88,6 +89,7 @@ a {
     /* background-image: -webkit-gradient(linear, left top, left bottom, from(#f4b93d), to(#f4b93d));
     background-image: linear-gradient(180deg, #f4b93d, #f4b93d); */
     padding-top: 47px;
+
 }
 
 .bg-uba {
@@ -98,28 +100,35 @@ a {
 .bg-smart {
     background-image: linear-gradient(rgb(105, 96, 242) 9.375%, rgb(126, 119, 238) 95.3125%);
 }
-.bg-ngwa{
+
+.bg-ngwa {
     background-color: #171410;
 }
-.bg-white{
-    background-color: #9b9393;  
+
+.bg-white {
+    background-color: #9b9393;
 }
-.bg-white2{
-    background-color: #fafafa;  
+
+.bg-white2 {
+    background-color: #fafafa;
 }
-.bg-blue{
+
+.bg-blue {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#A8E7FC), to(#4360b1));
-    background-image: linear-gradient(180deg, #A8E7FC, (#4360b1)); 
+    background-image: linear-gradient(180deg, #A8E7FC, (#4360b1));
 }
-.bg-gray{
+
+.bg-gray {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#9CA7C4), to(#b9c2db));
     background-image: linear-gradient(180deg, #9CA7C4, #B9C2DB);
 }
-.bg-cesa{
+
+.bg-cesa {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#DA5A1F), to(#EF7623));
     background-image: linear-gradient(180deg, #DA5A15, #EF7623);
 }
-.bg-green{
+
+.bg-green {
     background-image: linear-gradient(180deg, #53E8D6 0%, #29CDAC 100%);
 }
 
@@ -133,9 +142,10 @@ img {
 .file-img {
     width: 30%;
 }
-.file-img-2{
-    width: 62%; 
-    padding-left: 15px; 
+
+.file-img-2 {
+    width: 62%;
+    padding-left: 15px;
     box-shadow: 17 23 11 #c53434;
 }
 
@@ -192,16 +202,17 @@ img {
 }
 
 .links-blk {
-    margin-top: 30px;
-    padding-bottom: 30px;
+    margin-top: 47px;
+    padding-bottom: 47px;
 }
 
 .social-h {
     color: #646464;
     margin-right: 26px;
 }
-.icon:hover{
-opacity: 0.2;
+
+.icon:hover {
+    opacity: 0.2;
 }
 
 .contact-btn {
@@ -225,7 +236,8 @@ opacity: 0.2;
         margin-left: 0;
         background: #f9f9f9;
     }
-} 
+}
+
 @media (max-width: 479px) {
     .dside {
         position: static;
@@ -249,7 +261,7 @@ opacity: 0.2;
     .dside {
         position: static;
         width: 100%;
-        height: 560px;
+        height: auto;
         padding-left: 0;
         padding-right: 0;
     }
@@ -276,6 +288,7 @@ opacity: 0.2;
         width: 100%;
     }
 }
+
 @media (max-width: 479px) {
     .mydesc {
         padding-left: 10px;
@@ -283,10 +296,40 @@ opacity: 0.2;
     }
 }
 
+@media (max-width: 479px) {
+    .avatar {
+        height: 300px;
+        width: 300px;
+        border-radius: 100%;
+        /* background-image: url(../images/benjis.jpg) */
+    }
+}
+
+@media (max-width: 767px) {
+    .avatar {
+        height: 300px;
+        width: 300px;
+        border-radius: 100%;
+        /* background-image: url(../images/benjis.jpg) */
+    }
+}
+
+@media (max-width: 991px) {
+    .avatar {
+        height: 300px;
+        width: 300px;
+        border-radius: 100%;
+
+    }
+}
+
+
+
 @media (max-width: 767px) {
     .mydesc {
         padding-left: 10px;
         padding-right: 10px;
+        font-size: 24px;
     }
 }
 
@@ -294,6 +337,13 @@ opacity: 0.2;
     .mydesc {
         padding-left: 10px;
         padding-right: 10px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 991px) {
+    .myname {
+        font-size: 70px;
     }
 }
 
@@ -320,22 +370,41 @@ opacity: 0.2;
         clear: none;
     }
 }
+
+@media (max-width: 991px) {
+    .mytitle {
+        font-size: 3.4em;
+    }
+}
+
+@media (max-width: 991px) {
+    .details {
+        height: 70px;
+        margin-top: 60px;
+        margin-bottom: 80px;
+        text-align: center;
+        color: #646464;
+    }
+}
+
 /* IMAGE */
-/* @media (max-width:479px) {
+@media (max-width:479px) {
     .file-img {
-        width: 79%;
+        width: 45%;
         padding-right: 20px;
     }
 }
+
 @media (max-width:766px) {
     .file-img {
-        width: 79%;
+        width: 45%;
         padding-right: 20px;
     }
 }
+
 @media (max-width:991px) {
     .file-img {
-        width: 79%;
+        width: 45%;
         padding-right: 20px;
     }
-} */
+}

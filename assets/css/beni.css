@@ -69,13 +69,13 @@ Generated using nucleoapp.com
     list-style-type: none;
 }
 
-.icon-ul > li {
+.icon-ul>li {
     display: flex;
     align-items: flex-start;
     line-height: 1.4;
 }
 
-.icon-ul > li > .icon {
+.icon-ul>li>.icon {
     margin-right: 0.4em;
     line-height: inherit;
 }
@@ -196,4 +196,10 @@ Generated using nucleoapp.com
 
 .beni-envelope::before {
     content: "\ea08";
+}
+
+@media (max-width:991px) {
+    .icon {
+        font-size: 40px;
+    }
 }
