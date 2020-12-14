@@ -20,7 +20,7 @@ body {
     -o-transition: all .25s;
     transition: all .25s;
     color: #222;
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
 a {
@@ -38,7 +38,7 @@ a:hover {
 }
 
 b {
-    font-weight: 700 !important
+    font-weight: 700 !important;
 }
 
 h1,
@@ -49,21 +49,21 @@ h5,
 h6,
 p {
     margin: 0;
-    font-weight: 300
+    font-weight: 300;
 }
 
 ul {
     list-style-type: none;
-    margin: 0
+    margin: 0;
 }
 
 ul li a {
     color: #fff;
-    text-decoration: none
+    text-decoration: none;
 }
 
 p {
-    letter-spacing: .01em
+    letter-spacing: .01em;
 }
 
 .nav-txt {
@@ -416,11 +416,11 @@ p {
 a .icon {
     /* padding-left: 20px; */
     padding-right: 20px;
-    color: #f7f9fa;
+    color: #111;
 }
 
 a .icon:hover {
-    color: #3db9f1;
+    color: #9fa4a6;
 }
 
 .img-dwn {
@@ -471,6 +471,7 @@ a .icon:hover {
         padding-left: 3rem;
         margin-right: 0;
         margin-left: 0;
+
         /* background-image: url(../imgs/benjis5.png); */
         /* background-blend-mode: overlay; */
     }
