@@ -42,6 +42,7 @@ b {
 }
 
 @media (max-width:575px) {
+
     h1,
     h2,
     h3,
@@ -449,7 +450,7 @@ small {
 a .icon {
     /* padding-left: 20px; */
     padding-right: 20px;
-    color: #ffffff;
+    color: #111;
 }
 
 a .icon:hover {
