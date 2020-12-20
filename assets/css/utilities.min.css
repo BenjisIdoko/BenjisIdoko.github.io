@@ -481,6 +481,12 @@
     font-size: 40px;
 }
 
+@media(max-width:991px) {
+    .u-fontSize-h3 {
+        font-size: 32px;
+    }
+}
+
 .u-fontSize-h4 {
     font-size: 34px;
 }
