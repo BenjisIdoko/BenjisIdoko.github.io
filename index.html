@@ -15,7 +15,7 @@
         <link rel="preload" href="ProductSans-Regular.woff2" as="font" type="font/woff2" crossorigin/>
         <link rel="stylesheet" href="assets/css/beni.css"/>
         <link rel="stylesheet" href="assets/css/animate.min.css"/>
-        <!-- <link rel="stylesheet" href="assets/css/input.css"/> -->
+        <link rel="stylesheet" href="assets/css/input.css"/>
         <link rel="stylesheet" href="assets/css/style.css"/>
         <link rel="stylesheet" href="assets/css/main.css"/>
     </head>
@@ -27,12 +27,10 @@
             <!--Nav Section Starts-->
             <nav class="relative container mx-auto pt-2 menu">
                 <div class="flex items-center justify-between">
-                    <div class="items-center">
-                        <a href="index.html" id="logo">BE.</a>
+                    <div class="items-center"><a href="index.html" id="logo">BE.</a>
                     </div>
-                    <div class=" dmenu"><a href="index.html#about" class="font-bold hover:text-slate-300">About</a>
-                        <a href="assets/pdf/Benjamin Emmanuel.pdf" class="font-bold hover:text-slate-300" target="_blank">Resume</a>
-                        <a href="mailto:benjaminemma360@gmail.com" class="hidden sm:hidden md:flex nav-contact-button bg-orange-600 text-white" id="navContact"><span class="contact-intouch"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-current inline-block -mt-1 mr-1 w-5">
+                    <div class=" dmenu">
+                        <a href="index.html#about" class="font-bold hover:text-slate-300">About</a><a href="assets/pdf/Benjamin Emmanuel.pdf" class="font-bold hover:text-slate-300" target="_blank">Resume</a><a href="mailto:benjaminemma360@gmail.com" class="hidden sm:hidden md:flex nav-contact-button bg-orange-600 text-white" id="navContact"><span class="contact-intouch"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-current inline-block -mt-1 mr-1 w-5">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 5V13C18 14.1046 17.1046 15 16 15H11L6 19V15H4C2.89543 15 2 14.1046 2 13V5C2 3.89543 2.89543 3 4 3H16C17.1046 3 18 3.89543 18 5ZM7 8H5V10H7V8ZM9 8H11V10H9V8ZM15 8H13V10H15V8Z">
 </path>
                                 </svg></span>Send a mail</a>
@@ -43,17 +41,19 @@
             <!-- Social & Email -->
             <div orientation="left" class="leftside">
                 <ul class="social">
-                    <li><a href="https://dribbble.com/Benjis"> <i class="icon beni-dribbble social-h text-orange-600"></i> </a>
-                    </li>
-                    <li><a href="https://www.instagram.com/iam_idoko/"> <i class="icon beni-instagram-3 social-h text-orange-600"></i> </a>
+                    <li>
+                        <a href="https://dribbble.com/Benjis"> <i class="icon beni-dribbble social-h text-orange-600"></i> </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/benjamin-emmanuel-89941a4a/"> <i class="icon beni-linkedin-alt social-h text-orange-600"></i> </a>
+                        <a href="https://www.instagram.com/iam_idoko/"> <i class="icon beni-instagram-3 social-h text-orange-600"></i> </a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/benjamin-emmanuel-89941a4a/"> <i class="icon beni-linkedin-alt social-h text-orange-600"></i> </a>
                     </li>
                 </ul>
             </div>
             <div orientation="rightside" class="rightside">
-                <d></d>                 
+                <div class="mailme text-orange-600"><a href="mailto:benjaminemma360@gmail.com">benjaminemma360@gmail.com</a>
+                </div>
             </div>
             <!--Social & Email Ends Here-->
             <main class="fillHeight sm:mx-5">
@@ -62,7 +62,7 @@
                         <div>
                             <p class="py-3 text-xl text-slate-900 font-normal">Hello,</p>
                             <h1 class="b-head font-extrabold text-4xl md:text-4xl sm:text-4xl lg:text-5xl text-2xl:text-5xl tracking-tight leading-light">
-                            I'm Benjmain, <span class="text-green-600">A digital product designer</span> </h1>
+                            I'm Benjmain, <span class="text-orange-600">A digital product desiger</span> </h1>
                         </div>
                         <div class="text-2xl font-medium pt-5">
                             I am passionate about creating solutions while building
@@ -81,8 +81,7 @@
                     <h2 class="text-3xl font-bold py-6 ">
                     Some Projects</h2>
                     <div class="container ">
-                        <div class=" myproject flex flex-col mb-20">
-                            <a href="faantaxi.html"> <div class="project-image">
+                        <div class=" myproject flex flex-col mb-20"><a href="faantaxi.html"> <div class="project-image">
                                     <img src="assets/imgs/projects/smart-q.jpg" alt="" class="img-box"/>
                                 </div> <div class="project-box sm:w-full md:w-1/2 sm:mt-5">
                                     <div class="project-details md:-mt-10 md:-ml-10 float-right">
@@ -92,8 +91,7 @@
                                     </div>
                                 </div> </a>
                         </div>
-                        <div class="myproject flex flex-col mb-20">
-                            <a href=""> <div class="project-image">
+                        <div class="myproject flex flex-col mb-20"><a href=""> <div class="project-image">
                                     <img class="img-box" src="assets/imgs/projects/fam2.jpg" alt=""/>
                                 </div> <div class="project-box sm:w-full md:w-1/2 sm:mt-5">
                                     <div class="project-details md:-mt-10 md:-ml-10 float-right">
@@ -103,7 +101,8 @@
                                     </div>
                                 </div> </a>
                         </div>
-                        <div class="myproject flex flex-col mb-20"><a href=""> <div class="project-image">
+                        <div class="myproject flex flex-col mb-20">
+                            <a href=""> <div class="project-image">
                                     <img class="img-box" src="assets/imgs/projects/smart-q.jpg" alt=""/>
                                 </div> <div class="project-box sm:w-full md:w-1/2 sm:mt-5">
                                     <div class="project-details md:-mt-10 md:-ml-10 float-right">
@@ -249,11 +248,7 @@
                 Always looking forward to build the next billion user App with you and your team . Hire Me. </p>
             </div>
             <div class="details md:hidden sm:flex space-x-3 content-center pb-20">
-                <p>We can relate here</p>
-                <a href="https://dribbble.com/Benjis"> <i class="icon beni-dribbble social-h"></i> </a>
-                <a href="https://twitter.com/bensrighthand"> <i class="icon beni-twitter social-h"></i> </a>
-                <a href="https://www.instagram.com/iam_idoko/"> <i class="icon beni-instagram-3 social-h"></i> </a>
-                <a href="https://www.linkedin.com/in/benjamin-emmanuel-89941a4a/"> <i class="icon beni-linkedin-alt social-h"></i> </a>
+                <p>We can relate here</p><a href="https://dribbble.com/Benjis"> <i class="icon beni-dribbble social-h"></i> </a><a href="https://twitter.com/bensrighthand"> <i class="icon beni-twitter social-h"></i> </a><a href="https://www.instagram.com/iam_idoko/"> <i class="icon beni-instagram-3 social-h"></i> </a><a href="https://www.linkedin.com/in/benjamin-emmanuel-89941a4a/"> <i class="icon beni-linkedin-alt social-h"></i> </a>
             </div>
         </footer>
         <div class="bg-gray-900 pb-10">
