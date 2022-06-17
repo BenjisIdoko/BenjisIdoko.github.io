@@ -10,9 +10,9 @@ module.exports = {
       xl: '1440px'
     },
     extend: {
-      fontFamily:{
-        sans:"Product Sans, system-ui, sans-serif",
-      },
+      // fontFamily:{
+      //   sans:"Product Sans, system-ui, sans-serif",
+      // },
       // colors:{
       //   brand:"rgb(var(--color-brand) / <alpaha-value)>",
       // },
