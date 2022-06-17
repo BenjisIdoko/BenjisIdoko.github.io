@@ -13,9 +13,9 @@ module.exports = {
       fontFamily:{
         sans:"Product Sans, system-ui, sans-serif",
       },
-      colors:{
-        brand:"rgb(var(--color-brand) / <alpaha-value)>",
-      },
+      // colors:{
+      //   brand:"rgb(var(--color-brand) / <alpaha-value)>",
+      // },
     },
   },
   plugins: [],
