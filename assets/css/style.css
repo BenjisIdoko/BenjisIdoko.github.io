@@ -36,14 +36,34 @@
 
     /* --color-brand: var(var(--ben)) */
 }
-@font-face {
+/* @font-face {
     font-family: 'Product Sans';
     src: url('../fonts/ProductSans-Regular.woff2') format('woff2'),
-        url('../fonts/ProductSans-Regular.woff') format('woff');
-    font-weight: normal, bold, bolder;
+        url('../fonts/ProductSans-Regular.woff') format('woff'),
+        url('../fonts/ProductSans-Bold.woff2') format('woff2'),
+        url('../fonts/ProductSans-Bold.woff') format('woff');
+    font-weight: normal, bold;
     font-style: normal;
     font-display: swap;
-} 
+}  */
+@font-face {
+    font-family: 'Product Sans';
+    src: url('..fonts/ProductSans-Regular.woff2') format('woff2'),
+        url('../fonts/ProductSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    src: url('../fonts/ProductSans-Bold.woff2') format('woff2'),
+        url('./fonts/ProductSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 
 body {
@@ -490,7 +510,7 @@ small {
 .mailme a {
     margin: 20px auto;
     padding: 10px;
-    font-weight: 100;
+    font-weight: 200;
     /* font-size: var(--fz-xs) */
     /* line-height: var(--fz-lg) */
     letter-spacing: 0.1em;
@@ -800,14 +820,6 @@ p>i {
     vertical-align: middle;
 }
 
-/* a .icon {
-    color: var(--ben-link);
-} */
-
-a .icon:hover {
-    color: #9fa4a6;
-}
-
 .img-dwn {
     margin-bottom: -50px;
     z-index: 1;
@@ -895,7 +907,7 @@ a .icon:hover {
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background-color: var(--ben-light);
+    background-color: var(--ben-link);
 }
 
 .social li {
