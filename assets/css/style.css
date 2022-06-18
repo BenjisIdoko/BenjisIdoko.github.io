@@ -40,7 +40,7 @@
     font-family: 'Product Sans';
     src: url('../fonts/ProductSans-Regular.woff2') format('woff2'),
         url('../fonts/ProductSans-Regular.woff') format('woff');
-    font-weight: normal;
+    font-weight: normal, bold, bolder;
     font-style: normal;
     font-display: swap;
 } 
@@ -927,10 +927,10 @@ a .icon:hover {
 }
 
 .hero-project {
-    min-height: 60vh;
-    /* background-image: url('../imgs/process.jpg'); */
+    min-height: 90vh;
+    background-image: url('../imgs/projects/Riders@3x.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* filter: sepia(100%); */
+    filter: sepia(10%);
 }
