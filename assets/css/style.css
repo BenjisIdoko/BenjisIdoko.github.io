@@ -48,7 +48,7 @@
 }  */
 @font-face {
     font-family: 'Product Sans';
-    src: url('..fonts/ProductSans-Regular.woff2') format('woff2'),
+    src: url('../fonts/ProductSans-Regular.woff2') format('woff2'),
         url('../fonts/ProductSans-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -98,7 +98,7 @@ h6 {
     line-height: 1.6;
 }
 
-a {
+/* a {
     display: inline-block;
     -webkit-text-decoration: none;
     text-decoration: none;
@@ -108,7 +108,7 @@ a {
     position: relative;
     -webkit-transition: var(--transition);
     transition: var(--transition);
-}
+} */
 
 a:hover {
     cursor: pointer;
@@ -792,7 +792,7 @@ p>i {
     align-items: center;
 }
 
-.myproject .project-details {
+/* .myproject */ .project-details { 
     box-shadow: 0 10px 30px -30px var(--ben-shadow);
     transition: var(--transition);
     position: relative;
@@ -805,14 +805,14 @@ p>i {
     font-size: var(--fz-md);
 }
 
-.myproject .project-image {
+/*.myproject*/ .project-image {
     box-shadow: 0 10px 30px -15px var(--ben-shadow);
     transition: var(--transition);
     position: relative;
     z-index: 1;
 }
 
-.myproject .project-image a {
+/*.myproject*/ .project-image a {
     max-width: 100%;
     height: 100%;
     background-color: var(--ben-link);
