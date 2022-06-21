@@ -1010,6 +1010,10 @@ video {
 }
 
 @media (min-width: 320px) {
+  .xs\:hidden {
+    display: none;
+  }
+
   .xs\:w-full {
     width: 100%;
   }
