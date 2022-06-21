@@ -10,51 +10,69 @@
         <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/favicon_io/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/favicon_io/favicon-16x16.png"/>
         <link rel="manifest" href="assets/imgs/favicon_io/site.webmanifest"/>
-        <title>Benjamin Emmanuel</title>
+        <title>Benjamin Emmanuel | Thrifty</title>
         <!-- Custom styles for this template -->
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"/>
+        <link rel="preload" href="ProductSans-Regular.woff2" as="font" type="font/woff2" crossorigin/>
         <link rel="stylesheet" href="assets/css/beni.css"/>
-        <link rel="stylesheet" href="assets/css/animate.min.css"/>
         <link rel="stylesheet" href="assets/css/style.css"/>
         <link rel="stylesheet" href="assets/css/main.css"/>
     </head>
     <body class="overflow-x-hidden">
-        <nav class="relative container mx-auto bg-white menu">
-            <div class="flex items-center justify-between mb-8 mt-4">
-                <div class="items-center"><a href="index.html" id="logo">BE.</a><a href="index.html#about" class="pl-10 font-bold">About</a><a href="assets/pdf/Benjamin Emmanuel.pdf" class="font-bold pl-10 hover:text-slate-300" target="_blank">Resume</a>
+        <nav class="relative container mx-auto pt-2 menu">
+            <div class="flex items-center justify-between">
+                <div class="items-center">
+                    <a href="index.html" id="logo" class="text-sky-900">BE.</a>
                 </div>
-                <div class="hidden sm:hidden md:flex">
-                    <a href="mailto:benjaminemma360@gmail.com" class=" nav-contact-button bg-orange-600 text-white" id="navContact"> <span class="contact-intouch"> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-current inline-block -mt-1 mr-1 w-5">
+                <div class=" dmenu text-sky-600"><a href="index.html#about" class="font-bold hover:text-slate-300">About</a>
+                    <a href="assets/pdf/Benjamin Emmanuel.pdf" class="font-bold hover:text-slate-300" target="_blank">Resume</a>
+                    <a href="mailto:benjaminemma360@gmail.com" class="hidden sm:hidden md:flex nav-contact-button bg-sky-600 text-white" id="navContact"><span class="contact-intouch"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-current inline-block -mt-1 mr-1 w-5">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18 5V13C18 14.1046 17.1046 15 16 15H11L6 19V15H4C2.89543 15 2 14.1046 2 13V5C2 3.89543 2.89543 3 4 3H16C17.1046 3 18 3.89543 18 5ZM7 8H5V10H7V8ZM9 8H11V10H9V8ZM15 8H13V10H15V8Z">
 </path>
-                            </svg> </span>Send a mail </a>
+                            </svg></span>Send a mail</a>
                 </div>
             </div>
         </nav>
-        <div class="container w-full hero-project">
-            <div class="flex flex-col align-middle p-20 mb"> 
-</div>
-        </div>
         <main class="fillHeight">
-            <div class="project-box">
+            <div class="project-box mt-20 mb-10">
                 <div class="py-5">
-                    <h1 class="text-4xl font-bold num-header pt-10">Project Overview</h1>
-                    <p class=""> is a solution that links patients (using the Smartclinic Mobile) with Doctors or hospitals (using the Smartclinic EMR) from the comfort of their homes.</p>
-                </div>
-                <div class="py-5">
-                    <h3 class="text-2xl font-bold">Challenge</h3> 
-                    <p>Sayil Sunday.<br/> Amin Balogun <br/>Emeka Nwachukwu<br/> </p> 
-                </div>
-                <div class="py-5">
-                    <h3 class="text-2xl font-bold pb-10">Solutions</h3> 
-                    <p class="text-xl font-semibold">user journey</p> 
-                    <div class"container">
-                        <img src="assets/imgs/projects/smart-q.jpg"/>
+                    <div class=" sm:w-full">
+                        <h1 class="text-4xl font-bold">FAANTAXI</h1>
+                        <p> Design, Testing, Management</p>
                     </div>
+                    <div class="">
+                        <p class="text-xl font-bold"> A Taxi Solution, by the Federal Aiprot Authority of Nigeria (FAAN) to enable passengers book and schedule taxi rides to and from all Nigerian Airports.</p>
+                    </div>                     
                 </div>
+                <div class="flex w-full" id="thrifty">
+</div>
+                <section class="flex flex-col w-full py-5">
+                    <div class="pb-">
+                        <h3 class="text-3xl font-bold pb-2">Challenge</h3>
+                        <ul class="text-xl">
+                            <li>Airport Taxi in Nigeria has been challenged with the issues of poor system for a long time.
+</li>
+                            <li>
+                                paasenger touting due to bad taxi orgainsation.<br/>Revenue loss for the airport managemnt
+                            </li>
+                            <li>
+                                Insecurity because Drivers were not properly documented by the airport system 
+</li>
+                        </ul>
+                        <div class="mb-2">
+                            <h3 class="text-3xl font-bold">Solution</h3>
+                            <p class="text-xl">Airport Taxi Shuttles in Nigeria has been challenged with poor organisation, shunting and touting leading to a lot of passengers been robbed, and harrased by unprofesional taxi companies.  </p>
+                        </div>
+                    </div>                     
+                </section>
+                <section class="container py-5">
+                    <h3 class="text-3xl font-bold mt-20 float-left pb-10">How we are Solving the Problem</h3> 
+                    <div class="">
+                        <img src="assets/imgs/projects/thriftyflow.png"/>
+                    </div>
+                </section>
             </div>
         </main>
         <footer class="text-center bg-gray-900 py-40">
@@ -62,7 +80,7 @@
             I'm just an <a href="mailto:benjaminemma360@gmail.com" target="_blank" class="text-orange-200">Email</a>
             Away </h2><a href="mailto:@gmail.com" target="_blank"></a>
             <div class="">
-                <p class="text-slate-50 mx-10 sm:text-xs">
+                <p class="text-slate-50 mx-10 md:text-2xl sm:text-xs">
                 Always looking forward to build the next billion user App with you and your team . Hire Me. </p>
             </div>
             <div class="details hidden md:hidden sm:flex space-x-3 content-center">
@@ -77,5 +95,5 @@
             <p class="text-slate-50 text-center text-xs">
                     Copyright © 2022 Benjamin Idoko Emmanuel. All rights reserved </p>
         </div>
-        <script src="assets/js/main.js"></script>
     </body>
+</html>
