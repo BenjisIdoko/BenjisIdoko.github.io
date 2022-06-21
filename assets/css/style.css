@@ -58,7 +58,7 @@
 @font-face {
     font-family: 'Product Sans';
     src: url('../fonts/ProductSans-Bold.woff2') format('woff2'),
-        url('./fonts/ProductSans-Bold.woff') format('woff');
+        url('../fonts/ProductSans-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -98,21 +98,26 @@ h6 {
     line-height: 1.6;
 }
 
-/* a {
-    display: inline-block;
+ a {
+    /* display: inline-block; */
     -webkit-text-decoration: none;
     text-decoration: none;
     -webkit-text-decoration-skip-ink: auto;
     text-decoration-skip-ink: auto;
-    color: inherit;
     position: relative;
     -webkit-transition: var(--transition);
     transition: var(--transition);
-} */
+    color:rgb(2 132 199);
+}
 
 a:hover {
     cursor: pointer;
-    /* color: var(--ben-link); */
+    color:rgb(12 74 110);
+    text-decoration: none;
+    -webkit-text-decoration: none;
+    -webkit-text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
+    
 }
 
 ul {
@@ -121,7 +126,6 @@ ul {
 }
 
 ul li a {
-    /* color: #fff; */
     text-decoration: none;
 }
 
@@ -136,14 +140,15 @@ p>a {
     text-decoration-skip-ink: auto;
     position: relative;
     transition: var(--transition);
-    color: var(--ben-link);
+    color:rgb(2 132 199);
 }
 
 p>a:hover,
 p>a:focus,
 p>a:active {
-    color: var(--green);
+    color:rgb(12 74 110);
     outline: 0;
+    cursor: pointer;
 }
 
 p>a:hover:after,
@@ -155,7 +160,7 @@ p>a:active:after {
 p>a:hover>*,
 p>a:focus>*,
 p>a:active>* {
-    color: var(--ben-link) !important;
+    color:rgb(12 74 110);
     -webkit-transition: var(--transition);
     transition: var(--transition);
 }
