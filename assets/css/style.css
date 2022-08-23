@@ -19,7 +19,7 @@
     --ben-txt: #fefefe;
     --ben-light: #a8b2d1;
     --ben-lighter: #ccd6f6;
-    --ben-link: rgb(253, 167, 141);
+    --ben-link: rgba(251, 146, 60, 1);
     --link-hover: rgba(100, 255, 218, 0.1);
     --ben-shadow: rgba(2, 12, 27, 0.7);
     --fz-xxs: 0.75rem;
@@ -71,7 +71,7 @@ body {
     max-width: 100%;
     -webkit-perspective-origin: 0 100%;
     perspective-origin: 0 100%;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-family: 'Product Sans', sans-serif;
     font-weight: 400;
     margin: 0;
@@ -107,15 +107,18 @@ h6 {
     position: relative;
     -webkit-transition: var(--transition);
     transition: var(--transition);
+    
 }
 
-a:hover {
+a:hover
+a:active {
     cursor: pointer;
     /* color:rgb(12 74 110); */
     text-decoration: none;
     -webkit-text-decoration: none;
     -webkit-text-decoration-skip-ink: auto;
     text-decoration-skip-ink: auto;
+    color: var(--ben-link);
     
 }
 
@@ -139,13 +142,12 @@ p>a {
     text-decoration-skip-ink: auto;
     position: relative;
     transition: var(--transition);
-    color:rgb(2 132 199);
+    color: var(--ben-link)
 }
 
 p>a:hover,
 p>a:focus,
 p>a:active {
-    color:rgb(12 74 110);
     outline: 0;
     cursor: pointer;
 }
@@ -159,7 +161,6 @@ p>a:active:after {
 p>a:hover>*,
 p>a:focus>*,
 p>a:active>* {
-    color:rgb(12 74 110);
     -webkit-transition: var(--transition);
     transition: var(--transition);
 }
@@ -176,7 +177,10 @@ p>a:after {
     transition: var(--transition);
     opacity: 0.5;
 }
-
+/* a>span{
+    color: rgb(251, 146, 60);
+    opacity: 1;
+} */
 /* section {
     margin: 0 auto;
     padding: 100px 0px;
@@ -221,23 +225,11 @@ p>a:after {
     z-index: 1000;
     top: 0;
     height: 90px;
-    padding: 0 150px;
+    /* padding: 0 150px; */
     background-color: rgba(3, 9, 17, 0.6);
     backdrop-filter: blur(10px);
 }
-@media (max-width: 480px) {
-    .menu {
-        padding: 40px;
-    }
-}
 
-.menu--js {
-    -webkit-transition: all .25s;
-    -o-transition: all .25s;
-    transition: all .25s;
-    opacity: 0;
-    visibility: hidden;
-}
 
 #logo {
     opacity: 1;
@@ -250,53 +242,6 @@ p>a:after {
     /* color: var(--light-ben); */
 }
 
-/* main {
-    margin: 0px auto;
-    max-width: 100%;
-    max-width: 1600px;
-    min-height: 100vh;
-    padding: 200px 150px;
-}
-@media (max-width:1080px) {
-    main {
-        padding: 200px 100px;
-    }
-}
-
-@media (max-width:768px) {
-    main {
-        padding: 150px 50px;
-    }
-}
-
-@media (max-width:480px) {
-    main {
-        padding: 125px 25px;
-    }
-} */
-
-/* .fillHeight {
-    padding: 0 150px;
-}
-@media (max-width:1080px) {
-    .fillHeight {
-        padding: 0 40px;
-    }
-}
-
-@media (max-width:768px) {
-    .fillHeight {
-        padding: 0 20px;
-    }
-}
-
-@media (max-width:480px) {
-    .fillHeight {
-        padding: 0 20px;
-    }
-}  */
-
-
 
 .hero-sec {
     -webkit-box-pack: center;
@@ -307,15 +252,12 @@ p>a:after {
     min-height: 100vh;
     padding: 0px;
     margin: 0px;
-    background-image: url(../imgs/projects/riders.png);
+    /* background-image: url(../imgs/projects/riders.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 
 }
 
-.hero-sec p {
-    margin: 0px 0px 1.88rem 0.25rem;
-}
 
 .intro {
     color: var(--ben-link);
@@ -364,13 +306,6 @@ p>a:after {
     }
 }
 
-.hero-sec h1 {
-    color: var(--ben-lighter);
-}
-
-.hero-sec h3 {
-    font-size: clamp(24px, 4vw, 60px);
-}
 
 .pro-sec {
     display: flex;
@@ -498,96 +433,28 @@ small {
     writing-mode: vertical-rl;
 }
 
-.uncard {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-clip: border-box;
-}
-
-.uncard>ul {
-    border: 1px solid var(--ben-link);
-    padding: 0px 20px;
-}
-
-.uncard>ul>li {
-    margin: 10px 0;
-}
-
-.job-text {
-    font-weight: 700;
-    color: #757a81;
-    font-size: 24px;
-    line-height: 31px;
-}
 
 .dtext-right {
     text-align: right;
 }
 
-.experience {
-    display: flex;
-    flex-direction: column;
-    -webkit-box-align: center;
-    /* align-items: center; */
-}
 
-.exp-box {
-    list-style: none;
-    padding: 0;
-    margin: 50px 0px 0px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 15px;
-    position: relative;
-}
-
-.exp-li {
-    position: relative;
-    cursor: default;
-    transition: var(--transition);
-}
-
-.myexp {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    /* height: 100%; */
-    max-height: 100%;
-    padding: 10px 20px;
-    /* padding: 2rem 1.75rem; */
-    border-radius: var(--border-radius);
-    box-shadow: 0 10px 30px -15px var(--ben-shadow);
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    transition: var(--transition);
-}
-
-.exp-title {
-    margin: 0px 0px 10px;
-    color: var(--ben-lighter);
-    font-size: var(--fz-xxl);
-}
-
-.exp-det {
-    color: var(--ben-lighter);
-    font-size: var(--fz-md);
-}
-
-p>i {
-    font-size: var(--fz-xs);
-}
 
 .exp-tag {
     font-weight: 800;
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+    /* margin-left: 0px; */
+    display: inline-block;
+    border-radius: 9999px;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
 }
-
+.faan{
+background-color: green;
+}
 .-details .melink {
     color: var(--ben-link);
     background-color: transparent;
@@ -932,14 +799,7 @@ transition-timing-function: cubic-bezier(.4,0,.2,1);
     color: #fff;
 }
 
- #faan {
-    min-height: 80vh;
-    background-image: url('../imgs/projects/Riders.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: sepia(10%);
-} 
+
 #fam {
     min-height: 90vh;
     background-image: url('../imgs/projects/fam.jpg');
