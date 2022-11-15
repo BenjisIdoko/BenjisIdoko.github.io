@@ -596,6 +596,10 @@ video {
   visibility: visible;
 }
 
+.static {
+  position: static;
+}
+
 .absolute {
   position: absolute;
 }
@@ -611,6 +615,10 @@ video {
 
 .-bottom-\[1px\] {
   bottom: -1px;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .col-span-6 {
@@ -867,6 +875,11 @@ video {
   background-color: rgb(147 51 234 / var(--tw-bg-opacity));
 }
 
+.bg-blue-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\/assets\/imgs\/projects\/riders\.png\'\)\] {
   background-image: url('/assets/imgs/projects/riders.png');
 }
@@ -881,6 +894,14 @@ video {
 
 .bg-\[url\(\'\/assets\/imgs\/projects\/thrifty-1\.jpg\'\)\] {
   background-image: url('/assets/imgs/projects/thrifty-1.jpg');
+}
+
+.bg-\[url\(\'\/assets\/imgs\/projects\/faantaxi\.png\.jpg\'\)\] {
+  background-image: url('/assets/imgs/projects/faantaxi.png.jpg');
+}
+
+.bg-\[url\(\'\/assets\/imgs\/projects\/thrifty-1\.jpg\.jpg\'\)\] {
+  background-image: url('/assets/imgs/projects/thrifty-1.jpg.jpg');
 }
 
 .from-slate-600 {
@@ -904,6 +925,18 @@ video {
 .from-purple-300 {
   --tw-gradient-from: #d8b4fe;
   --tw-gradient-to: rgb(216 180 254 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-blue-900 {
+  --tw-gradient-from: #1e3a8a;
+  --tw-gradient-to: rgb(30 58 138 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-sky-900 {
+  --tw-gradient-from: #0c4a6e;
+  --tw-gradient-to: rgb(12 74 110 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -960,6 +993,11 @@ video {
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .py-3 {
@@ -1097,8 +1135,8 @@ video {
   font-weight: 600;
 }
 
-.font-normal {
-  font-weight: 400;
+.font-black {
+  font-weight: 900;
 }
 
 .leading-tight {
@@ -1220,6 +1258,16 @@ video {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+
+  .xs\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .xs\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 480px) {
@@ -1313,6 +1361,11 @@ video {
     background-position: left;
   }
 
+  .sm\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   .sm\:pt-8 {
     padding-top: 2rem;
   }
@@ -1339,6 +1392,11 @@ video {
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1384,6 +1442,10 @@ video {
     width: 50%;
   }
 
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
   .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -1402,6 +1464,11 @@ video {
 
   .md\:bg-left {
     background-position: left;
+  }
+
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .md\:pt-8 {
@@ -1430,6 +1497,16 @@ video {
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .md\:leading-tight {
@@ -1479,6 +1556,10 @@ video {
     width: 50%;
   }
 
+  .lg\:w-3\/4 {
+    width: 75%;
+  }
+
   .lg\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -1493,6 +1574,11 @@ video {
 
   .lg\:bg-right {
     background-position: right;
+  }
+
+  .lg\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .lg\:pt-10 {
