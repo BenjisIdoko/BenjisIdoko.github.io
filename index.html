@@ -32,34 +32,33 @@
 </head>
 
 <body class="overflow-x-hidden">
-    <main class="md:mx-20 lg:mx-20 sm:mx-20 xs:mx-5">
-        <!--Nav Section Starts-->
-        <nav class="container mx-auto py-8 xs:px-0 sticky menu">
-            <div class="flex justify-between">
-                <div>
-                    <a href="index.html" id="logo">BE.</a>
-                </div>
-                <div class=" dmenu text-slate-100">
-                    <a href="index.html#work" class=" hover:text-orange-400">Work</a>
-                    <a href="assets/pdf/benjaminemmanuel-CV.pdf" class=" hover:text-orange-400"
-                        target="_blank">Resume</a>
-                    <a href="mailto:benjaminemma360@gmail.com"
-                        class="hidden sm:hidden md:flex nav-contact-button bg-slate-600 text-white" id="navContact"><span
-                            class="contact-intouch">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" class="fill-current inline-block -mt-1 mr-1 w-5">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M18 5V13C18 14.1046 17.1046 15 16 15H11L6 19V15H4C2.89543 15 2 14.1046 2 13V5C2 3.89543 2.89543 3 4 3H16C17.1046 3 18 3.89543 18 5ZM7 8H5V10H7V8ZM9 8H11V10H9V8ZM15 8H13V10H15V8Z">
-                                </path>
-                            </svg></span>Send a mail</a>
-                </div>
+     <!--Nav Section Starts-->
+     <nav class="container py-8 xs:px-0 sticky top-0 menu">
+        <div class="flex justify-between md:px-20 lg:px-20 sm:px-20 xs:px-5">
+            <div>
+                <a href="index.html" id="logo">BE.</a>
             </div>
-        </nav>
-        <!-- Nav Ends-->
-
+            <div class=" dmenu text-slate-100">
+                <a href="index.html#work" class=" hover:text-orange-400">Work</a>
+                <a href="assets/pdf/benjaminemmanuel-CV.pdf" class=" hover:text-orange-400"
+                    target="_blank">Resume</a>
+                <a href="mailto:benjaminemma360@gmail.com"
+                    class="hidden sm:hidden md:flex nav-contact-button bg-slate-600 text-white" id="navContact"><span
+                        class="contact-intouch">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="fill-current inline-block -mt-1 mr-1 w-5">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18 5V13C18 14.1046 17.1046 15 16 15H11L6 19V15H4C2.89543 15 2 14.1046 2 13V5C2 3.89543 2.89543 3 4 3H16C17.1046 3 18 3.89543 18 5ZM7 8H5V10H7V8ZM9 8H11V10H9V8ZM15 8H13V10H15V8Z">
+                            </path>
+                        </svg></span>Send a mail</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav Ends-->
+    <main class="md:mx-20 lg:mx-20 sm:mx-20 xs:mx-5">
 
         <section class="relative container mx-auto flex xs:px-5">
-            <div class="md:w-1/2 lg:w-1/2 sm:w-full xs:w-full">
+            <div class="md:w-3/4 lg:w-3/4 sm:w-full xs:w-full">
                 <div class="pt-8 sm:pt-8 md:pt-8 lg:pt-10 2xl:pt-12 pb-6 sm:pb-6 md:pb-16 lg:pb-8 ">
                     <p class="py-3 text-xl">Hello,</p>
                     <h1
@@ -89,6 +88,25 @@
                         Featured work
                     </h3>
                     <div class="index-grids grid gap-4 sm:gap-4 md:gap-8 lg:gap-14 grid-rows-3 sm:grid-rows-3 md:grid-rows-3 lg:grid-rows-2 2xl:grid-cols-2">
+                        <div class="row-span-1 sm:row-span-1 md:row-span-1 lg:row-span-1 h-auto sm:h-64 md:h-64 lg:h-96">
+                            <a href="/payforce.html">
+                                <div class="index-project-card bg-gradient-to-r from-[#1e293b] to-[#0f172a]">
+                                    <div
+                                        class="grid gap-2 sm:gap-2 md:gap-4 grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 h-full items-center justify-center">
+                                        <div
+                                            class="col-span-6 sm:col-span-6 md:col-span-6 lg:col-span-6 col-start-2 sm:col-start-2 md:col-start-2 lg:col-start-2">
+                                            <h2
+                                                class="text-2xl sm:text-2xl md:text-3xl leading-none font-bold mb-3 lg:mb-3 tracking-normal">
+                                                Payforce</h2>
+                                            <p class="text-base sm:text-base md:text-lg lg:text-xl tracking-normal">
+                                                Design concept of an authentication app.</p>
+                                        </div>
+                                        <div class="project-photo col-span-5 sm:col-span-5 md:col-span-5 lg:col-span-5 h-full bg-cover bg-left sm:bg-left md:bg-left lg:bg-right bg-no-repeat select-none"
+                                            style="background-image:url(/assets/imgs/projects/fam.jpg)"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                         <div class="group row-span-1 sm:row-span-1 md:row-span-1 lg:row-span-1 h-auto sm:h-64 md:h-64 lg:h-96">
                             <a href="/faantaxi.html" data-barba-prevent="self">
                                 <div class="index-project-card pt-11 pb-11 bg-gradient-to-r from-[#1e293b] to-[#0f172a]">
@@ -108,25 +126,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="row-span-1 sm:row-span-1 md:row-span-1 lg:row-span-1 h-auto sm:h-64 md:h-64 lg:h-96">
-                            <a href="/fam.html">
-                                <div class="index-project-card bg-gradient-to-r from-[#1e293b] to-[#0f172a]">
-                                    <div
-                                        class="grid gap-2 sm:gap-2 md:gap-4 grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 h-full items-center justify-center">
-                                        <div
-                                            class="col-span-6 sm:col-span-6 md:col-span-6 lg:col-span-6 col-start-2 sm:col-start-2 md:col-start-2 lg:col-start-2">
-                                            <h2
-                                                class="text-2xl sm:text-2xl md:text-3xl leading-none font-bold mb-3 lg:mb-3 tracking-normal">
-                                                FAM</h2>
-                                            <p class="text-base sm:text-base md:text-lg lg:text-xl tracking-normal">
-                                                Design concept of an authentication app.</p>
-                                        </div>
-                                        <div class="project-photo col-span-5 sm:col-span-5 md:col-span-5 lg:col-span-5 h-full bg-cover bg-left sm:bg-left md:bg-left lg:bg-right bg-no-repeat select-none"
-                                            style="background-image:url(/assets/imgs/projects/fam.jpg)"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+
                         <div class="row-span-1 sm:row-span-1 md:row-span-1 lg:row-span-1 h-auto sm:h-64 md:h-64 lg:h-96">
                             <a href="/thrifty.html">
                                 <div class="index-project-card bg-gradient-to-r from-[#1e293b] to-[#0f172a]">
@@ -156,44 +156,43 @@
                 I have had the pleasure working with some amazing people and companies.These are 3 of
                 them. </p>
 
-            <div class="flex flex-wrap mx-auto container gap-4">
-                <div class="w-full">
+            <div class="flex col mx-auto container gap-4">
+                <div class="w-full col-1">
                     <div class="myexp bg-gray-900 py-5 px-5">
-                        <h3 class="text-slate-400 text-2xl font-bold py-2">Nexmove Tecnologies</h3>
+                        <h3 class="text-slate-400 text-xl font-bold py-2">Nexmove Tecnologies</h3>
                         <p class="text-slate-50 py-2">Product Designer <i> (2020 - Present )</i></p>
-                        <div class="exp-det">
-                            <p class="pb-1"> Product designer from ideation to
+                        <ul class="exp-det list-disc px-5 py-5">
+                            <li class="pb-1 text-xl"> Product designer from ideation to
                                 creation of KikiSave mobile App and web app with a
-                                target audience of <span class="text-orange-400">2 million</span> users. </p>
-                            <p class="pb-1">Worked with the development team building the FAANTAXi airport shuttle
-                                mobile and desktop application.</p>
-                        </div>
+                                target audience of <span class="text-orange-400">2 million</span> users. </li>
+                            <li class="pb-1">Worked with the development team building the FAANTAXi airport shuttle
+                                mobile and desktop application.</li>
+                            </ul>
                     </div>
                 </div>
-                <div class="w-full">
+                <div class="w-full col-2">
                     <div class="myexp bg-gray-900 py-5 px-5">
                         <h3 class="text-slate-400 text-2xl font-bold py-2"> The Smarthub Abuja </h3>
                         <p class="text-slate-50 py-2">UI/UX Designer <i>( 2018 - 2020 )</i></p>
-                        <div class="exp-det">
-                            <p class="pb-1">Designed UI components and interfaces for a
+                        <ul class="exp-det list-disc px-5 py-5">
+                            <li class="pb-1">Designed UI components and interfaces for a
                                 e-health product targeted at 15 hospitals, reducing consultation time by <span
                                     class="text-orange-400">75%</span> and
-                                increased hospital productivity by <span class="text-orange-400">60%.</span></p>
-                            <p class="pb-1">Increased the design team via training and mentorship from 2 to 4 </p>
-                        </div>
+                                increased hospital productivity by <span class="text-orange-400">60%.</span></li>
+                            <li class="pb-1">Increased the design team via training and mentorship from 2 to 4 </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="w-full">
+                <div class="w-full col-3">
                     <div class="myexp bg-gray-900 py-5 px-6">
                         <h3 class="text-slate-400 text-2xl font-bold py-2">Projaro Technologies.</h3>
                         <p class="text-slate-50 py-2">UI/UX Designer <i> (2016 - 2019 )</i> </p>
-                        <div class="exp-det">
-                            <p class="pb-1">Designed  of several client projects (Mobile
-                                apps, Web apps, and WordPress websites.</p>
-                            <p class="pb-1">Project lead and UI designer for the CESA school web and mobile App.</p>
-                            <p class="pb-1">Currently a design faciltator at the Projaro academy teaching the UX
-                                design class</p>
-                        </div>
+                        <ul class="exp-det list-disc px-5 py-5">
+                            <li class="pb-1">Designed several client projects (Mobile
+                                apps, Web apps, and WordPress websites.</li>
+                            <li class="pb-1">Currently a Design faciltator at the Projaro academy, where i majorly teach UX
+                                design class and </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -224,12 +223,13 @@
                 </div>
             </div>
         </section>
+      
 
         
     </main>
     <footer class="text-center bg-gray-900 pt-20 mx-auto">
         <p class="pb-2">Contact me 👋</p>
-        <h2 class="footer-text "><a href="mailto:benjaminemma360@gmail.com" target="_blank"
+        <h2 class="footer-text md:text-6xl sm:text-3xl font-black "><a href="mailto:benjaminemma360@gmail.com" target="_blank"
                 class="text-orange-200">benjaminemma360@gmail.com</a>
             </h2>
         <div class="">
@@ -238,15 +238,14 @@
         </div>
         <div class="details space-x-3 content-center py-20">
             <p class="pb-10">We can relate here</p>
-            <a href="https://dribbble.com/Benjis"><span class="text-2xl hover:text-orange-400 underline">Dribble</span> </a>
-            <a href="https://twitter.com/bensrighthand"> <span class="text-2xl hover:text-orange-400 underline">Twitter</span> </a>
-            <a href="https://www.instagram.com/iam_idoko/"> <span class="text-2xl hover:text-orange-400 underline">Instagram</span> </a>
-            <a href="https://www.linkedin.com/in/benjamin-emmanuel-89941a4a/"><span class="text-2xl hover:text-orange-400 underline">Linkedin</span></a>
+            <a href="https://dribbble.com/Benjis"><span class="md:text-2xl xs:text-lg hover:text-orange-400 underline">Dribbble</span> </a>
+            <a href="https://twitter.com/bensrighthand"> <span class="md:text-2xl xs:text-lg hover:text-orange-400 underline">Twitter</span> </a>
+            <a href="https://www.instagram.com/iam_idoko/"> <span class="md:text-2xl xs:text-lg hover:text-orange-400 underline">Instagram</span> </a>
+            <a href="https://www.linkedin.com/in/benjamin-emmanuel-89941a4a/"><span class="md:text-2xl xs:text-lg hover:text-orange-400 underline">LinkedIn</span></a>
         </div>
         <div class="pb-4">
-            <p class="text-sm pb-1">designed and coded with ❤️ </p>
-            <p class="text-slate-50 text-center text-xs">
-                Copyright © 2022 Benjamin Idoko Emmanuel. All rights reserved </p>
+            <p class="text-sm pb-1">designed and coded with ❤️ just for you</p>
+            
                 
         </div>
     </footer>
