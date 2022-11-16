@@ -828,9 +828,5 @@ transition-timing-function: cubic-bezier(.4,0,.2,1);
     background: rgba(156, 243, 255, 0.08);
     backdrop-filter: blur(11px);
     /* Note: backdrop-filter has minimal browser support */
-    
     border-radius: 16px;
-}
-.test{
-    padding-: ;
 }
