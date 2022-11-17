@@ -79,12 +79,12 @@ body {
     -webkit-transition: all .25s;
     -o-transition: all .25s;
     transition: all .25s;
-    color: var(--ben-txt);
+    /* color: var(--ben-txt); */
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     line-height: 1.6;
-    background-color: var(--ben);
+    /* background-color: var(--ben); */
     /* background: url('../imgs/bg.webp');
     background-size: cover;
     background-repeat: no-repeat; */
@@ -228,9 +228,6 @@ p>a:after {
     z-index: 1000;
     top: 0;
     height: 90px;
-    /* padding: 0 150px; */
-    background-color: rgba(3, 9, 17, 0.6);
-    backdrop-filter: blur(10px);
 }
 
 
@@ -242,7 +239,6 @@ p>a:after {
     transition: .25s;
     font-weight: 700;
     font-size: 2rem;
-    /* color: var(--light-ben); */
 }
 
 
@@ -641,7 +637,6 @@ background-color: green;
     align-items: center;
 }
 .feat-wrap{
-    background-color: rgb(241 245 249/var(--tw-bg-opacity));
     letter-spacing: -.025em;
     padding-bottom: 3.5rem;
     padding-top: 3.5rem;
@@ -830,3 +825,16 @@ transition-timing-function: cubic-bezier(.4,0,.2,1);
     /* Note: backdrop-filter has minimal browser support */
     border-radius: 16px;
 }
+.switch{
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+white-space: nowrap;
+border-width: 0;
+}
+
+  
