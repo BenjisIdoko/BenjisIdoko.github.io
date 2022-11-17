@@ -16,3 +16,8 @@
                 </div>
             </div> -->
             <!--Social & Email Ends Here-->
+
+
+            bg-gradient-to-r from-[#1e293b] to-[#0f172a]
+
+            bg-[url('/assets/imgs/bg.webp')]
