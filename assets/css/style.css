@@ -145,7 +145,7 @@ p>a {
     text-decoration-skip-ink: auto;
     position: relative;
     transition: var(--transition);
-    color: var(--ben-link)
+    color: var(--ben-link);
 }
 
 p>a:hover,
@@ -239,6 +239,9 @@ p>a:after {
     transition: .25s;
     font-weight: 700;
     font-size: 2rem;
+    writing-mode:vertical-rl; 
+    -ms-writing-mode: sideways-lr;
+
 }
 
 
