@@ -145,7 +145,7 @@ p>a {
     text-decoration-skip-ink: auto;
     position: relative;
     transition: var(--transition);
-    color: var(--ben-link);
+    /* color: var(--ben-link); */
 }
 
 p>a:hover,
@@ -175,30 +175,12 @@ p>a:after {
     height: 1px;
     position: relative;
     bottom: 0.37em;
-    background-color: var(--ben-link);
+    /* background-color: var(--ben-link); */
     -webkit-transition: var(--transition);
     transition: var(--transition);
     opacity: 0.5;
 }
-/* a>span{
-    color: rgb(251, 146, 60);
-    opacity: 1;
-} */
-/* section {
-    margin: 0 auto;
-    padding: 100px 0px;
-}
-@media (max-width: 768px) {
-    section {
-        padding: 80px 0px;
-    }
-}
 
-@media (max-width: 480px) {
-    section {
-        padding: 60px 0px;
-    }
-} */
 
 .nav-contact-button {
     -webkit-border-radius: 9999px;
@@ -239,8 +221,7 @@ p>a:after {
     transition: .25s;
     font-weight: 700;
     font-size: 2rem;
-    writing-mode:vertical-rl; 
-    -ms-writing-mode: sideways-lr;
+    /* writing-mode:vertical-rl;  */
 
 }
 
