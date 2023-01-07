@@ -779,30 +779,6 @@ transition-timing-function: cubic-bezier(.4,0,.2,1);
 }
 
 
-#fam {
-    min-height: 90vh;
-    background-image: url('../imgs/projects/fam.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: sepia(10%);
-}
-#smartq {
-    min-height: 90vh;
-    background-image: url('../imgs/projects/smart-q.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: sepia(10%);
-}
-#thrifty {
-    min-height: 90vh;
-    background-image: url('../imgs/projects/thrifty1.png');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* filter: sepia(10%); */
-}
 .idoko{
     background: rgba(156, 243, 255, 0.08);
     backdrop-filter: blur(11px);
