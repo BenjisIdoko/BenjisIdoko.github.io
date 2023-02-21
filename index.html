@@ -1,20 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 
-<head 
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
-  // Whenever the user explicitly chooses light mode
-localStorage.theme = 'light'
-// Whenever the user explicitly chooses dark mode
-localStorage.theme = 'dark'
-
-// Whenever the user explicitly chooses to respect the OS preference
-localStorage.removeItem('theme')
-  >
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -89,7 +76,7 @@ localStorage.removeItem('theme')
     <!-- Nav Ends-->
     <main class="md:mx-20 lg:mx-20 sm:mx-20 xs:mx-5">
 
-        <section class="relative container mx-auto flex xs:px-4">
+        <section class="relative container mx-auto flex xs:px-4 bg-white dark:[new-bg]">
             <div class="md:w-3/4 lg:w-3/4 sm:w-full xs:w-full">
                 <div class="pt-8 sm:pt-8 md:pt-8 lg:pt-10 2xl:pt-12 pb-6 sm:pb-6 md:pb-16 lg:pb-8 ">
                     
@@ -117,8 +104,7 @@ localStorage.removeItem('theme')
                             </svg> </span>Send a mail 
                         </a>
                 </div>
-            </div>
-            
+            </div>  
         </section>
         <!--Projects Section-->
         <section class="feat-wrap mx-auto xs:px-5" id="work">
@@ -142,7 +128,7 @@ localStorage.removeItem('theme')
                                             Mobile App redesign, design system, design team managment and support .</p>
                                     </div>
                                     <div class="project-photo col-span-5 sm:col-span-5 md:col-span-5 lg:col-span-5 h-full bg-cover bg-left sm:bg-left md:bg-left lg:bg-right bg-no-repeat select-none"
-                                        style="background-image:url(/assets/imgs/projects/payforce/payforce1.jpg)"></div>
+                                        style="background-image:url(/assets/imgs/projects/payforce/payforce1.webp)"></div>
                                 </div>
                             </div>
                         </a>
@@ -166,7 +152,7 @@ localStorage.removeItem('theme')
                                         </p>
                                     </div>
                                     <div class="project-photo col-span-5 sm:col-span-5 md:col-span-5 lg:col-span-5 h-full bg-cover bg-left sm:bg-left md:bg-left lg:bg-right bg-no-repeat select-none"
-                                        style="background-image:url(/assets/imgs/projects/faantaxi.png)">
+                                        style="background-image:url(/assets/imgs/projects/faantaxi.webp)">
                                     </div>
                                 </div>
                             </div>
@@ -186,7 +172,7 @@ localStorage.removeItem('theme')
                                         <p class="text-base sm:text-base md:text-lg lg:text-xl tracking-normal">A quick and easy way for the underbanked and unbanked to save money using their call credit, saving agent or preferred bank account.</p>
                                     </div>
                                     <div class="project-photo col-span-5 sm:col-span-5 md:col-span-5 lg:col-span-5 h-full bg-cover bg-left sm:bg-left md:bg-left lg:bg-right bg-no-repeat select-none"
-                                        style="background-image:url(assets/imgs/projects/thrifty-1.jpg)"></div>
+                                        style="background-image:url(assets/imgs/projects/thrifty-1.webp)"></div>
                                 </div>
                             </div>
                         </a>
