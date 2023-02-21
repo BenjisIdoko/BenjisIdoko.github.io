@@ -796,5 +796,7 @@ clip: rect(0, 0, 0, 0);
 white-space: nowrap;
 border-width: 0;
 }
-
-  
+.new-bg{
+background-image: linear-gradient(180deg, rgba(21,33,121,0.50) 5%, rgba(30,6,6,0.50) 93%), 
+linear-gradient(0deg, rgba(3,9,17,0.87) 22%, rgba(5,17,33,0.10) 100%)
+}
