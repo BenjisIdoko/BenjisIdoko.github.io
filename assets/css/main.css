@@ -1525,10 +1525,6 @@ video {
     width: 50%;
   }
 
-  .lg\:w-3\/4 {
-    width: 75%;
-  }
-
   .lg\:w-full {
     width: 100%;
   }
