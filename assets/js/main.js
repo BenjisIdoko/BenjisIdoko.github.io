@@ -1,45 +1,79 @@
-// ==== darkToggler
-const darkTogglerCheckbox = document.querySelector("#darkToggler");
+// Dark Mode based on system preference
 const html = document.querySelector("html");
 
-const darkModeToggler = () => {
-  darkTogglerCheckbox.checked
-    ? html.classList.add("dark")
-    : html.classList.remove("dark");
+// Function to update theme based on system preference
+const updateTheme = () => {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    html.classList.add("dark");
+  } else {
+    html.classList.remove("dark");
+  }
 };
-darkModeToggler();
 
-darkTogglerCheckbox.addEventListener("click", darkModeToggler);
+// Initialize theme on page load
+updateTheme();
 
-// // ====== scroll top js
-// function scrollTo(element, to = 0, duration = 500) {
-//   const start = element.scrollTop;
-//   const change = to - start;
-//   const increment = 20;
-//   let currentTime = 0;
+// Listen for system theme changes
+if (window.matchMedia) {
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  
+  // Modern browsers
+  if (mediaQuery.addEventListener) {
+    mediaQuery.addEventListener('change', updateTheme);
+  } 
+  // Older browsers
+  else if (mediaQuery.addListener) {
+    mediaQuery.addListener(updateTheme);
+  }
+}
 
-//   const animateScroll = () => {
-//     currentTime += increment;
+// Mobile Menu Toggle
+const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+const navCenter = document.querySelector(".nav-center");
+const navRight = document.querySelector(".nav-right");
 
-//     const val = Math.easeInOutQuad(currentTime, start, change, duration);
+if (mobileMenuToggle) {
+  mobileMenuToggle.addEventListener("click", () => {
+    const isOpen = mobileMenuToggle.classList.contains("active");
+    
+    if (isOpen) {
+      mobileMenuToggle.classList.remove("active");
+      navCenter?.classList.remove("mobile-open");
+      navRight?.classList.remove("mobile-open");
+      document.body.style.overflow = "";
+    } else {
+      mobileMenuToggle.classList.add("active");
+      navCenter?.classList.add("mobile-open");
+      navRight?.classList.add("mobile-open");
+      document.body.style.overflow = "hidden";
+    }
+  });
 
-//     element.scrollTop = val;
+  // Close mobile menu when clicking on a link
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenuToggle.classList.remove("active");
+      navCenter?.classList.remove("mobile-open");
+      navRight?.classList.remove("mobile-open");
+      document.body.style.overflow = "";
+    });
+  });
+}
 
-//     if (currentTime < duration) {
-//       setTimeout(animateScroll, increment);
-//     }
-//   };
+// Nav scroll effect with enhanced blur
+let lastScroll = 0;
+const nav = document.querySelector(".nav");
 
-//   animateScroll();
-// }
-
-// Math.easeInOutQuad = function (t, b, c, d) {
-//   t /= d / 2;
-//   if (t < 1) return (c / 2) * t * t + b;
-//   t--;
-//   return (-c / 2) * (t * (t - 2) - 1) + b;
-// };
-
-// document.querySelector(".back-to-top").onclick = () => {
-//   scrollTo(document.documentElement);
-// };
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  
+  // Add scrolled class when user scrolls down
+  if (currentScroll > 50) {
+    nav?.classList.add("scrolled");
+  } else {
+    nav?.classList.remove("scrolled");
+  }
+  
+  lastScroll = currentScroll;
+});
