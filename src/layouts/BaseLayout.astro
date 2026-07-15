@@ -1,9 +1,13 @@
 ---
 import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../data/site.js';
 
 const {
-  title = 'Benjmain Idoko Emmanuel - Coming Soon',
-  description = "Benjmain Idoko Emmanuel's portfolio is currently under reconstruction.",
+  title = `${site.name} — ${site.role}`,
+  description = site.description,
+  home = false,
 } = Astro.props;
 ---
 
@@ -14,47 +18,33 @@ const {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="author" content="Benjmain Idoko Emmanuel" />
-    <meta name="robots" content="noindex, nofollow" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/imgs/favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/imgs/favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/imgs/favicon_io/favicon-16x16.png"
-    />
+    <meta name="author" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/imgs/favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/imgs/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/imgs/favicon_io/favicon-16x16.png" />
     <link rel="manifest" href="/assets/imgs/favicon_io/site.webmanifest" />
+    <link rel="preload" href="/assets/fonts/ProductSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/ProductSans-Bold.woff2" as="font" type="font/woff2" crossorigin />
     <title>{title}</title>
-    <link
-      rel="preload"
-      href="/assets/fonts/ProductSans-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/ProductSans-Bold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <script
-      src="https://unpkg.com/@lottiefiles/lottie-player@2.0.12/dist/lottie-player.js"
-      defer
-    ></script>
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
+    <Nav home={home} />
     <slot />
+    <Footer />
+    <script src="../scripts/ui.js"></script>
   </body>
 </html>

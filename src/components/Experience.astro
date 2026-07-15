@@ -1,0 +1,28 @@
+---
+import { experience } from '../data/site.js';
+---
+
+<section class="section" id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Experience</span>
+      <h2 class="section-title">Where I've made an impact</h2>
+      <p class="section-intro">
+        I've had the pleasure of working with some amazing people and companies.
+        These are three of them.
+      </p>
+    </div>
+
+    <div class="exp-grid">
+      {experience.map((e, i) => (
+        <article class="exp-card reveal" style={`--reveal-delay: ${i * 90}ms`}>
+          <h3 class="exp-company">{e.company}</h3>
+          <p class="exp-role">{e.role} · {e.period}</p>
+          <ul class="exp-points">
+            {e.points.map((pt) => <li set:html={pt} />)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

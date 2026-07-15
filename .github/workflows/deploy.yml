@@ -36,9 +36,6 @@ jobs:
       - name: Build with Astro
         run: npm run build
 
-      - name: Copy static assets
-        run: cp -R assets dist/assets
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -1,0 +1,19 @@
+---
+import { site } from '../data/site.js';
+---
+
+<section class="contact" id="contact">
+  <div class="container reveal">
+    <span class="eyebrow">Contact me 👋</span>
+    <br />
+    <a class="contact-email" href={`mailto:${site.email}`}>{site.email}</a>
+    <p class="contact-quote">
+      "Always looking forward to building the next billion-user app with you and
+      your team."
+    </p>
+    <div class="hero-actions" style="justify-content: center;">
+      <a class="btn btn-primary" href={`mailto:${site.email}?subject=Let's%20work%20together`}>Start a project</a>
+      <a class="btn btn-ghost" href={site.resume} target="_blank" rel="noopener">Download résumé</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+---
+const tools = ['Figma', 'Sketch', 'HTML & CSS', 'Webflow', 'WordPress'];
+---
+
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-copy reveal">
+      <span class="eyebrow">About me</span>
+      <h2 class="section-title" style="margin-bottom: 1.5rem;">
+        Design thinking, research & a bit of frontend.
+      </h2>
+      <p>
+        My name is Benjamin Emmanuel and I'm passionate about digital product
+        design — an exceptional solution creator using UI design, UX research,
+        design thinking and frontend development.
+      </p>
+      <p>
+        My everyday tools are the usual culprits —
+        <a class="about-link" href="https://sketch.com" target="_blank" rel="noopener noreferrer">Sketch</a>,
+        <a class="about-link" href="https://figma.com" target="_blank" rel="noopener noreferrer">Figma</a>
+        and <span class="highlight">HTML &amp; CSS</span> for UI development —
+        but I regularly work with low-code tools like
+        <a class="about-link" href="https://wordpress.org" target="_blank" rel="noopener noreferrer">WordPress</a>
+        and
+        <a class="about-link" href="https://webflow.com" target="_blank" rel="noopener noreferrer">Webflow</a>.
+      </p>
+      <p>
+        When I'm not staring at my laptop, I'm catching up on football (big fan
+        of Real Madrid and Arsenal), playing the drums, or spending good time
+        with family. An excellent communicator, a leader, husband, father,
+        teacher and friend — hardworking yet fun-loving, and a great asset to
+        any team.
+      </p>
+      <div class="tag-row" style="margin-top: 1.6rem;">
+        {tools.map((t) => <span class="tag">{t}</span>)}
+      </div>
+    </div>
+
+    <div class="about-portrait reveal" style="--reveal-delay: 120ms; background: radial-gradient(120% 120% at 50% 0%, rgba(251,146,60,0.25), transparent 60%), linear-gradient(160deg, #1a2740, #0a1120); display:grid; place-items:center; padding: 2rem;">
+      <img src="/assets/imgs/benjismemoji.png" alt="Benjamin's memoji" style="width: min(70%, 240px); height:auto; aspect-ratio:auto; border-radius:0; box-shadow:none; border:0;" />
+    </div>
+  </div>
+</section>
