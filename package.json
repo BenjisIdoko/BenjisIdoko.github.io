@@ -2,10 +2,13 @@
   "name": "benjisidoko.github.io",
   "version": "1.0.0",
   "description": "",
-  "main": "tailwind.config.js",
+  "type": "module",
   "scripts": {
-    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css",
-    "watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "tailwind:build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css",
+    "tailwind:watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch"
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,7 @@
   },
   "homepage": "https://github.com/BenjisIdoko/BenjisIdoko.github.io#readme",
   "devDependencies": {
+    "astro": "^7.0.9",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.39",
     "tailwindcss": "^4.1.12"

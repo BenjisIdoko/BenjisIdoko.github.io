@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+
+const {
+  title = 'Benjmain Idoko Emmanuel - Coming Soon',
+  description = "Benjmain Idoko Emmanuel's portfolio is currently under reconstruction.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Benjmain Idoko Emmanuel" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/imgs/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/imgs/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/imgs/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/imgs/favicon_io/site.webmanifest" />
+    <title>{title}</title>
+    <link
+      rel="preload"
+      href="/assets/fonts/ProductSans-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/ProductSans-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-player@2.0.12/dist/lottie-player.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
