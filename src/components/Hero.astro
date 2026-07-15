@@ -1,0 +1,44 @@
+---
+import { site } from '../data/site.js';
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-greeting reveal">
+      <p>Hello, I'm Benjamin</p>
+      <img class="hero-emoji" src="/assets/imgs/benjismemoji.png" alt="Benjamin's memoji" width="60" height="60" />
+    </div>
+
+    <h1 class="reveal" style="--reveal-delay: 80ms">
+      I design interfaces<br />for <span class="accent">digital products.</span>
+    </h1>
+
+    <p class="hero-lead reveal" style="--reveal-delay: 160ms">
+      Product & UI/UX designer building beautiful, useful experiences —
+      turning complex problems into positive, high-converting solutions.
+    </p>
+
+    <div class="hero-actions reveal" style="--reveal-delay: 240ms">
+      <a class="btn btn-primary" href={`mailto:${site.email}`}>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 5V13C18 14.1046 17.1046 15 16 15H11L6 19V15H4C2.89543 15 2 14.1046 2 13V5C2 3.89543 2.89543 3 4 3H16C17.1046 3 18 3.89543 18 5ZM7 8H5V10H7V8ZM9 8H11V10H9V8ZM15 8H13V10H15V8Z"></path></svg>
+        Let's work together
+      </a>
+      <a class="btn btn-ghost" href="#work">View selected work</a>
+    </div>
+
+    <div class="hero-stats reveal" style="--reveal-delay: 320ms">
+      <div class="hero-stat">
+        <div class="num">8+ yrs</div>
+        <div class="label">Designing products</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">2M+</div>
+        <div class="label">Users reached</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">Fintech · Mobility</div>
+        <div class="label">Industry focus</div>
+      </div>
+    </div>
+  </div>
+</section>

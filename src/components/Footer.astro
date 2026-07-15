@@ -1,0 +1,17 @@
+---
+import { site } from '../data/site.js';
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p class="footer-credit">
+      © {year} {site.name} · designed & coded with ♥
+    </p>
+    <div class="footer-social">
+      {site.social.map((s) => (
+        <a href={s.href} target="_blank" rel="noopener noreferrer">{s.label}</a>
+      ))}
+    </div>
+  </div>
+</footer>
