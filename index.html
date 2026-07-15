@@ -44,6 +44,10 @@
       crossorigin
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-player@2.0.12/dist/lottie-player.js"
+      defer
+    ></script>
   </head>
   <body class="coming-soon-page">
     <main class="coming-soon-shell" aria-labelledby="coming-soon-title">
@@ -65,21 +69,16 @@
             Send an email
           </a>
         </div>
-        <div class="construction-illustration" aria-hidden="true">
-          <div class="construction-sun"></div>
-          <div class="construction-frame">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="excavator">
-            <div class="excavator-arm"></div>
-            <div class="excavator-bucket"></div>
-            <div class="excavator-cabin"></div>
-            <div class="excavator-body"></div>
-            <div class="excavator-track"></div>
-          </div>
-          <div class="construction-ground"></div>
+        <div class="construction-lottie-wrap" aria-hidden="true">
+          <div class="lottie-fallback-art">Under construction</div>
+          <lottie-player
+            class="construction-lottie"
+            src="https://assets10.lottiefiles.com/packages/lf20_AQcLsD.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
         </div>
       </section>
     </main>
