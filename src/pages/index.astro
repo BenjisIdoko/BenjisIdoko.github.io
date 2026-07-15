@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <main class="coming-soon-shell" aria-labelledby="coming-soon-title">
+    <section class="coming-soon-hero">
+      <div class="coming-soon-brand" aria-label="Benjmain Idoko Emmanuel">
+        bie.
+      </div>
+      <div class="coming-soon-content">
+        <p class="coming-soon-kicker">Portfolio under reconstruction</p>
+        <h1 id="coming-soon-title">Benjmain Idoko Emmanuel</h1>
+        <p class="coming-soon-copy">
+          A cleaner portfolio experience is coming soon. For product design,
+          UI/UX, collaborations, or project inquiries, send a direct email.
+        </p>
+        <a
+          class="coming-soon-cta"
+          href="mailto:benjaminemm360@gmail.com?subject=Portfolio%20Inquiry"
+        >
+          Send an email
+        </a>
+      </div>
+      <div class="construction-lottie-wrap" aria-hidden="true">
+        <div class="lottie-fallback-art">Under construction</div>
+        <lottie-player
+          class="construction-lottie"
+          src="https://assets10.lottiefiles.com/packages/lf20_AQcLsD.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
