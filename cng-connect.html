@@ -57,6 +57,19 @@ a:hover{color:#2B4AA0;text-decoration-color:#2B4AA0}
 .scp5:hover { color: rgb(143, 166, 232) !important; }
 
 [hidden]{display:none!important}
+
+/* Interface polish: type, surfaces, hit areas, press feedback */
+p,li,dd{text-wrap:pretty}
+[data-count],[data-clock],[data-filter],dl dd{font-variant-numeric:tabular-nums}
+img:not([aria-hidden]){outline:1px solid rgba(22,23,26,.08);outline-offset:-1px}
+header a,header [data-inspect-toggle],footer a,#about dl a{position:relative}
+header a::after,header [data-inspect-toggle]::after,footer a::after,#about dl a::after{content:"";position:absolute;inset:-13px -8px}
+header [data-inspect-toggle]::after,header a.scp2::after{inset:-5px -4px}
+:is(.scp2,.scp6,.scp8,#work button,header [data-inspect-toggle],header [data-action=menu-toggle],footer button):not(.mx-top){transition:transform .15s cubic-bezier(.2,.7,.2,1),background-color .2s,color .2s,border-color .2s}
+:is(.scp2,.scp6,.scp8,#work button,header [data-inspect-toggle],header [data-action=menu-toggle],footer button):not(.mx-top):active{transform:scale(.96)}
+
+:focus-visible{outline:2px solid #2B4AA0;outline-offset:3px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
 [data-show][hidden],[data-if][hidden]{display:none!important}
 
 </style>
