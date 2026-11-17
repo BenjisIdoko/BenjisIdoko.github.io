@@ -9,11 +9,14 @@
   });
   document.querySelectorAll('dialog.wk-dialog').forEach(dlg => {
     // a click on the backdrop lands on the dialog element itself
-    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+    // only when the press also began on the backdrop (not a text selection dragged out)
+    let downOnBackdrop = false;
+    dlg.addEventListener('pointerdown', e => { downOnBackdrop = e.target === dlg; });
+    dlg.addEventListener('click', e => { if (e.target === dlg && downOnBackdrop) dlg.close(); });
     dlg.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', () => dlg.close()));
   });
   // let the featured layout know which filter is active
   document.querySelectorAll('[data-filter]').forEach(chip => {
-    chip.addEventListener('click', () => { if (grid) grid.dataset.filter = chip.dataset.filter; });
+    chip.addEventListener('click', () => { if (grid) grid.dataset.view = chip.dataset.filter; });
   });
 })();
