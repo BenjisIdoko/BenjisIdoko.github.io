@@ -108,6 +108,30 @@ header [data-inspect-toggle]::after,header a.scp2::after{inset:-5px -4px}
 :is(.scp2,.scp6,.scp8,#work button,header [data-inspect-toggle],header [data-action=menu-toggle],footer button):not(.mx-top):active{transform:scale(.96)}
 [data-show][hidden],[data-if][hidden]{display:none!important}
 
+/* Selected work: scroll-dealt project deck */
+.deck{position:relative;height:calc(var(--n,5)*70svh)}
+.deck__stage{position:sticky;top:0;height:100svh;display:grid;place-items:center;overflow:hidden;perspective:1800px}
+.deck__card{grid-area:1/1;width:min(100%,calc(74svh*16/10),1100px);margin-top:4svh;transform-origin:50% 25%;will-change:transform,filter}
+.deck__frame{position:relative;overflow:hidden;border-radius:24px;aspect-ratio:16/10;background:#16171A;box-shadow:0 50px 90px -35px rgba(10,12,20,.5)}
+.deck__frame>img{display:block;width:100%;height:100%;object-fit:cover;object-position:left top;outline:0}
+.deck__shade{position:absolute;inset:0;background:#16171A;opacity:0;pointer-events:none}
+.deck__phones{position:absolute;inset:0;display:flex;justify-content:center;align-items:flex-end;gap:3%;padding:7% 22% 0 8%}
+.deck__phones img{height:100%;width:auto;border-radius:18px 18px 0 0;box-shadow:0 24px 48px -24px rgba(0,0,0,.6);outline:0}
+.deck__visit{position:absolute;right:0;bottom:0;display:flex;align-items:center;gap:12px;min-height:48px;padding:12px 20px 12px 24px;background:#F4F2EC;border-top-left-radius:22px;color:#16171A;text-decoration:none;font:500 15px "Hanken Grotesk"}
+.deck__visit b{font-weight:600}
+.deck__visit span{font:400 12px "Spline Sans Mono";color:#5F6166}
+.deck__visit::before,.deck__visit::after{content:"";position:absolute;width:22px;height:22px;background:radial-gradient(circle at 0 0,transparent 21px,#F4F2EC 22px)}
+.deck__visit::before{left:-22px;bottom:0}
+.deck__visit::after{right:0;top:-22px}
+.deck__visit:hover{color:#2B4AA0}
+@media (max-width:760px),(prefers-reduced-motion:reduce){
+.deck{height:auto}
+.deck__stage{position:static;height:auto;display:flex;flex-direction:column;gap:20px;overflow:visible;perspective:none;padding-top:8px}
+.deck__card{width:100%;margin:0;transform:none!important;filter:none!important;will-change:auto}
+.deck__shade{display:none}
+}
+@media (max-width:760px){.deck__visit span{display:none}}
+
 /* Selected work: hand-drawn editorial accents */
 #work article h3::after{content:"";display:block;width:112px;height:8px;margin-top:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='8' viewBox='0 0 28 8'%3E%3Cpath d='M0 4Q3.5 0 7 4T14 4T21 4T28 4' fill='none' stroke='%232B4AA0' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left center/28px 8px}
 #work article dl>dt:first-of-type{font-family:Caveat,cursive!important;font-size:22px!important;line-height:1!important;text-transform:none!important;letter-spacing:0!important;color:#2B4AA0!important;align-self:start;justify-self:start;border:1.5px solid #2B4AA0;border-radius:52% 48% 55% 45%/58% 46% 54% 42%;padding:5px 12px 3px!important;transform:rotate(-3deg)}
@@ -203,6 +227,47 @@ dl[data-glow] dt{font-size:10.5px!important;line-height:1.35!important;overflow-
 <h2 style='font-family: "Familjen Grotesk"; font-weight: 600; font-size: clamp(36px, 4.6vw, 60px); letter-spacing: -0.04em; line-height: 1; margin: 0px;'>Selected work</h2>
 <p style="color: rgb(95, 97, 102); font-size: 17px; line-height: 1.55; margin: 18px 0px 0px; text-wrap: pretty;">Most of my work comes back to one problem: getting people to trust a product enough to put their money, time, or daily routine into it.</p>
 </div>
+</div>
+<section class="deck" data-deck aria-label="Projects at a glance" style="--n:5">
+<div class="deck__stage">
+<article class="deck__card" data-deck-card aria-label="CNG-Connect: a live, crowd-reported station map for CNG drivers.">
+<div class="deck__frame">
+<img src="assets/live/cng.webp" alt="The CNG-Connect homepage" width="1440" height="900" loading="lazy">
+<span class="deck__shade" data-deck-shade aria-hidden="true"></span>
+<a class="deck__visit" href="https://cng-connect.vercel.app" target="_blank" rel="noopener"><b>CNG-Connect</b><span>cng-connect.vercel.app ↗</span></a>
+</div>
+</article>
+<article class="deck__card" data-deck-card aria-label="Payforce: a mobile banking app for agents and merchants.">
+<div class="deck__frame" style="background:#1B2A4A">
+<div class="deck__phones" aria-hidden="true"><img src="assets/payforce/pf-tiers.webp" alt="" width="780" height="1688" loading="lazy"><img src="assets/payforce/pf-home.webp" alt="" width="780" height="1688" loading="lazy"><img src="assets/payforce/pf-receipt.webp" alt="" width="780" height="1688" loading="lazy"></div>
+<span class="deck__shade" data-deck-shade aria-hidden="true"></span>
+<a class="deck__visit" href="https://fairmoney.io/" target="_blank" rel="noopener"><b>Payforce</b><span>fairmoney.io ↗</span></a>
+</div>
+</article>
+<article class="deck__card" data-deck-card aria-label="Unitora: a fractional property investment platform.">
+<div class="deck__frame">
+<img src="assets/live/uni.webp" alt="The Unitora homepage" width="1440" height="900" loading="lazy">
+<span class="deck__shade" data-deck-shade aria-hidden="true"></span>
+<a class="deck__visit" href="https://useunitora.com" target="_blank" rel="noopener"><b>Unitora</b><span>useunitora.com ↗</span></a>
+</div>
+</article>
+<article class="deck__card" data-deck-card aria-label="Nigerian Jollof NYC: online menu and ordering for a caterer.">
+<div class="deck__frame">
+<img src="assets/live/nj.webp" alt="The Nigerian Jollof NYC homepage" width="1440" height="900" loading="lazy">
+<span class="deck__shade" data-deck-shade aria-hidden="true"></span>
+<a class="deck__visit" href="https://nigerianjollofnyc.com" target="_blank" rel="noopener"><b>Nigerian Jollof NYC</b><span>nigerianjollofnyc.com ↗</span></a>
+</div>
+</article>
+<article class="deck__card" data-deck-card aria-label="Skraibe: attendance and ministry management for a church.">
+<div class="deck__frame">
+<img src="assets/hr/s2.webp" alt="The Skraibe ministry overview dashboard" width="1800" height="1059" loading="lazy">
+<span class="deck__shade" data-deck-shade aria-hidden="true"></span>
+<a class="deck__visit" href="https://ttcushafa.vercel.app" target="_blank" rel="noopener"><b>Skraibe</b><span>ttcushafa.vercel.app ↗</span></a>
+</div>
+</article>
+</div>
+</section>
+<div style="margin: 8px 0px 0px;">
 <div aria-label="Filter projects" role="group" style="display: flex; flex-wrap: nowrap; gap: 8px; overflow-x: auto; max-width: 100%; margin: 0px calc(-1 * clamp(20px, 4vw, 48px)); padding: 4px clamp(20px, 4vw, 48px); scrollbar-width: none;">
 <button aria-pressed="true" data-filter="all" style='font: 500 14px "Hanken Grotesk"; white-space: nowrap; flex-shrink: 0; display: inline-flex; gap: 6px; padding: 9px 16px; border-radius: 999px; cursor: pointer; min-height: 44px; box-sizing: border-box; align-items: center; border: 1px solid rgb(207, 202, 191); background: rgb(22, 23, 26); color: rgb(244, 242, 236);'>All <span style="opacity: 0.55;">5</span></button>
 <button aria-pressed="false" data-filter="client" style='font: 500 14px "Hanken Grotesk"; white-space: nowrap; flex-shrink: 0; display: inline-flex; gap: 6px; padding: 9px 16px; border-radius: 999px; cursor: pointer; min-height: 44px; box-sizing: border-box; align-items: center; border: 1px solid rgb(207, 202, 191); background: transparent; color: rgb(22, 23, 26);'>Client work <span style="opacity: 0.55;">4</span></button>
@@ -504,5 +569,6 @@ dl[data-glow] dt{font-size:10.5px!important;line-height:1.35!important;overflow-
 <script src="./glass-fx.js" defer></script>
 <script src="./link-preview.js" defer></script>
 <script src="./site.js" defer></script>
+<script src="./deck.js" defer></script>
 </body>
 </html>
