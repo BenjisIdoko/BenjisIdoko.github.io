@@ -79,7 +79,7 @@ html,body,#dc-root,#dc-root>.sc-host{height:auto!important;min-height:100%}
 @keyframes stampIn{0%{opacity:0;transform:rotate(-9deg) scale(2.2)}55%{opacity:1;transform:rotate(-9deg) scale(.94)}70%{transform:rotate(-9deg) scale(1.02)}85%{opacity:1;transform:rotate(-9deg) scale(1)}100%{opacity:0;transform:rotate(-9deg) scale(1)}}
 html{scroll-behavior:smooth;overflow-x:clip}
 body{margin:0;overflow-x:clip;background:var(--paper);color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
-a{color:var(--ink);text-decoration-color:var(--rule-dark);text-underline-offset:3px}
+a{color:var(--ink);text-decoration-color:var(--rule-dark);text-decoration-thickness:1px;text-underline-offset:4px}
 a:hover{color:var(--accent);text-decoration-color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
@@ -96,6 +96,8 @@ a:hover{color:var(--accent);text-decoration-color:var(--accent)}
 .scp7:hover { transform: translateY(-4px) !important; }
 .scp8:hover { background: var(--accent) !important; border-color: var(--accent) !important; }
 .scp9:hover { color: var(--accent-on-ink) !important; }
+footer nav a{text-decoration-color:var(--line-ink)}
+footer nav a:hover{text-decoration-color:var(--accent-on-ink)}
 
 [hidden]{display:none!important}
 
@@ -137,11 +139,11 @@ header [data-inspect-toggle]::after,header a.scp2::after{inset:-5px -4px}
 .wk-more b{display:inline-block;font-weight:500;transition:transform .2s cubic-bezier(.2,.7,.2,1)}
 .wk-card:hover .wk-more b{transform:translateX(3px)}
 .wk-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:0 14px}
-.wk-case{position:relative;z-index:1;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font:600 14px "Hanken Grotesk";color:var(--accent);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
+.wk-case{position:relative;z-index:1;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font:600 14px "Hanken Grotesk";color:var(--accent)}
 .wk-case:hover{color:var(--ink)}
 .wk-dialog dt{color:var(--accent)!important}
 .wk-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.wk-live{position:relative;z-index:1;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font:500 14px "Hanken Grotesk";color:var(--ink);text-decoration:none}
+.wk-live{position:relative;z-index:1;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font:500 14px "Hanken Grotesk";color:var(--ink)}
 .wk-live:hover{color:var(--accent)}
 .wk-card[data-featured]{grid-column:1/-1;flex-direction:row}
 .wk-card[data-featured] .wk-media{flex:1.3 1 0;aspect-ratio:auto;min-height:340px}
@@ -226,12 +228,12 @@ dl[data-glow] dt{font-size:12px!important;line-height:1.35!important;overflow-wr
 <p style="font-size: clamp(17px, 1.5vw, 20px); line-height: 1.55; color: var(--ink-2); max-width: 40em; margin: 32px 0px 0px; text-wrap: pretty;">Ten years designing digital products, and I write the code that ships them. Lately: an investment platform with 120 investor accounts, a workforce system serving 144 workers, and a live CNG station map for Nigerian drivers.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px;">
 <a class="scp2" href="#work" style="text-decoration: none; background: var(--ink); color: var(--paper); padding: 14px 22px; border-radius: 999px; font-weight: 500; font-size: 15px; transition: background 0.2s;">See selected work ↓</a>
-<a class="scp4" download="" href="my-cv.pdf" style="text-decoration: underline var(--rule-dark); text-underline-offset: 5px; padding: 14px 10px; font-weight: 500; font-size: 15px; display: inline-flex; align-items: center;">Download CV</a>
+<a class="scp4" download="" href="my-cv.pdf" style="padding: 14px 10px; font-weight: 500; font-size: 15px; display: inline-flex; align-items: center;">Download CV</a>
 </div>
 <dl data-glow="" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin: 36px 0px 0px; max-width: 560px; border-radius: 20px; overflow: hidden; background: color-mix(in srgb, var(--ink) 8%, transparent); border: 1px solid color-mix(in srgb, var(--ink) 8%, transparent); box-shadow: color-mix(in srgb, var(--ink) 45%, transparent) 0px 18px 40px -28px;">
 <div style="display: flex; flex-direction: column; background: color-mix(in srgb, var(--surface) 62%, transparent); backdrop-filter: blur(14px) saturate(1.5); padding: 16px 18px;"><dt style='font-family: "Spline Sans Mono"; font-size: 12px; color: var(--ink-soft); order: 2;'>Years designing and shipping</dt><dd style='margin: 0px 0px 4px; font-family: "Familjen Grotesk"; font-weight: 600; font-size: 34px; letter-spacing: -0.03em; line-height: 1;'><span data-count="">10</span><span style="color: var(--accent);">+</span></dd></div>
 <div style="display: flex; flex-direction: column; background: color-mix(in srgb, var(--surface) 62%, transparent); backdrop-filter: blur(14px) saturate(1.5); padding: 16px 18px;"><dt style='font-family: "Spline Sans Mono"; font-size: 12px; color: var(--ink-soft); order: 2;'>Apps and products shipped</dt><dd style='margin: 0px 0px 4px; font-family: "Familjen Grotesk"; font-weight: 600; font-size: 34px; letter-spacing: -0.03em; line-height: 1;'><span data-count="">15</span><span style="color: var(--accent);">+</span></dd></div>
-<div style="display: flex; flex-direction: column; background: color-mix(in srgb, var(--surface) 62%, transparent); backdrop-filter: blur(14px) saturate(1.5); padding: 16px 18px;"><dt style='font-family: "Spline Sans Mono"; font-size: 12px; color: var(--ink-soft); order: 2;'>Websites shipped</dt><dd style='margin: 0px 0px 4px; font-family: "Familjen Grotesk"; font-weight: 600; font-size: 34px; letter-spacing: -0.03em; line-height: 1;'><span data-count="">57</span><span style="color: var(--accent);">+</span></dd></div>
+<div style="display: flex; flex-direction: column; background: color-mix(in srgb, var(--surface) 62%, transparent); backdrop-filter: blur(14px) saturate(1.5); padding: 16px 18px;"><dt style='font-family: "Spline Sans Mono"; font-size: 12px; color: var(--ink-soft); order: 2;'>Websites shipped</dt><dd style='margin: 0px 0px 4px; font-family: "Familjen Grotesk"; font-weight: 600; font-size: 34px; letter-spacing: -0.03em; line-height: 1;'><span data-count="">25</span><span style="color: var(--accent);">+</span></dd></div>
 </dl>
 <p style='display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 28px 0px 0px; font-family: "Spline Sans Mono"; font-size: 12px; color: var(--ink-soft);'><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--live); flex-shrink: 0;"></span>Available now<span style="color: var(--rule-dark);">/</span>Remote, or happy to relocate. I love Europe.</p>
 </div>
@@ -518,12 +520,12 @@ dl[data-glow] dt{font-size:12px!important;line-height:1.35!important;overflow-wr
 <p style='font-family: "Spline Sans Mono"; font-weight: 400; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 0px 0px 20px;'>03 / About</p>
 <h2 style='font-family: "Familjen Grotesk"; font-weight: 500; font-size: clamp(26px, 2.8vw, 36px); letter-spacing: -0.025em; line-height: 1.3; margin: 0px; text-wrap: pretty;'>I moved into design at <a href="https://projaro.com/" rel="noopener" target="_blank">Projaro</a> in 2016, led design at <a href="https://www.primedehealth.com/" rel="noopener" target="_blank">Primed E-Health</a>, and now write the code for my own designs.</h2>
 <p style="color: var(--ink-2); font-size: 17px; line-height: 1.6; margin: 24px 0px 0px; text-wrap: pretty;">Unitora and CNG-Connect are recent proof: I designed the interfaces, built them, and shipped them to real users.</p>
-<p style="color: var(--ink-2); font-size: 17px; line-height: 1.6; margin: 16px 0px 0px; text-wrap: pretty;">I’m most useful where one person is expected to shape a product and build it. I’m looking for product design or design engineering roles, Europe first and open worldwide.</p>
+<p style="color: var(--ink-2); font-size: 17px; line-height: 1.6; margin: 16px 0px 0px; text-wrap: pretty;">I’m most useful where one person is expected to shape a product and build it. I’m looking for product design or design engineering roles.</p>
 <p style="color: var(--ink-2); font-size: 17px; line-height: 1.6; margin: 16px 0px 0px; text-wrap: pretty;">Off screen I watch Real Madrid and Arsenal, play the drums, and hike the long way round.</p>
 </div>
 <dl style="margin: 0px; align-self: end; display: grid; grid-template-columns: 120px minmax(0px, 1fr); font-size: 16px; line-height: 1.5;">
 <dt style='font-family: "Spline Sans Mono"; font-size: 12px; color: var(--ink-soft); padding: 16px 0px; border-top: 1px solid var(--rule);'>Based in</dt><dd style="margin: 0px; padding: 14px 0px; border-top: 1px solid var(--rule);">Nigeria</dd>
-<dt style='font-family: "Spline Sans Mono"; font-size: 12px; color: var(--ink-soft); padding: 16px 0px; border-top: 1px solid var(--rule);'>Looking for</dt><dd style="margin: 0px; padding: 14px 0px; border-top: 1px solid var(--rule);">Product design, design engineering, WordPress development, and product management roles, Europe first and open worldwide</dd>
+<dt style='font-family: "Spline Sans Mono"; font-size: 12px; color: var(--ink-soft); padding: 16px 0px; border-top: 1px solid var(--rule);'>Looking for</dt><dd style="margin: 0px; padding: 14px 0px; border-top: 1px solid var(--rule);">Product design, design engineering, and WordPress development roles, Europe first and open worldwide</dd>
 <dt style='font-family: "Spline Sans Mono"; font-size: 12px; color: var(--ink-soft); padding: 16px 0px; border-top: 1px solid var(--rule);'>Work setup</dt><dd style="margin: 0px; padding: 14px 0px; border-top: 1px solid var(--rule);">Remote, or relocation for the right role</dd>
 <dt style='font-family: "Spline Sans Mono"; font-size: 12px; color: var(--ink-soft); padding: 16px 0px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);'>Links</dt><dd style="margin: 0px; padding: 14px 0px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 6px 16px;"><a download="" href="my-cv.pdf">CV</a><a href="https://www.linkedin.com/in/benjamin-emmanuel-89941a4a/" rel="noopener" target="_blank">LinkedIn</a><a href="https://github.com/BenjisIdoko" rel="noopener" target="_blank">GitHub</a><a href="https://dribbble.com/Benjis" rel="noopener" target="_blank">Dribbble</a></dd>
 </dl>
@@ -541,10 +543,10 @@ dl[data-glow] dt{font-size:12px!important;line-height:1.35!important;overflow-wr
 <div class="ft-bar" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: clamp(72px, 9vw, 120px); padding-top: 24px; border-top: 1px solid var(--line-ink-2); font-size: 14px; color: var(--on-ink-4);">
 <span>© 2026 Benjamin Emmanuel</span>
 <nav aria-label="Social links" style="display: flex; flex-wrap: wrap; gap: 20px;">
-<a class="scp9" href="https://www.linkedin.com/in/benjamin-emmanuel-89941a4a/" rel="noopener" style="color: var(--on-ink-2); text-decoration: none;" target="_blank">LinkedIn</a>
-<a class="scp9" href="https://github.com/BenjisIdoko" rel="noopener" style="color: var(--on-ink-2); text-decoration: none;" target="_blank">GitHub</a>
-<a class="scp9" href="https://dribbble.com/Benjis" rel="noopener" style="color: var(--on-ink-2); text-decoration: none;" target="_blank">Dribbble</a>
-<a class="scp9" href="mailto:benjaminemma360@gmail.com" style="color: var(--on-ink-2); text-decoration: none;">Email</a>
+<a class="scp9" href="https://www.linkedin.com/in/benjamin-emmanuel-89941a4a/" rel="noopener" style="color: var(--on-ink-2);" target="_blank">LinkedIn</a>
+<a class="scp9" href="https://github.com/BenjisIdoko" rel="noopener" style="color: var(--on-ink-2);" target="_blank">GitHub</a>
+<a class="scp9" href="https://dribbble.com/Benjis" rel="noopener" style="color: var(--on-ink-2);" target="_blank">Dribbble</a>
+<a class="scp9" href="mailto:benjaminemma360@gmail.com" style="color: var(--on-ink-2);">Email</a>
 </nav>
 </div>
 </div></footer>
