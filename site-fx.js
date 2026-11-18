@@ -175,7 +175,7 @@
   }), { rootMargin: '0px 0px -8% 0px' });
   const prep = (el, kind) => {
     if (seen.has(el)) return; seen.add(el);
-    const a = el.animate(frames[kind], { duration: kind === 'portrait' ? 1200 : 850, easing: kind === 'pop' ? 'cubic-bezier(.3,1.5,.5,1)' : EASE, fill: 'backwards' });
+    const a = el.animate(frames[kind], { duration: kind === 'portrait' ? 1200 : 850, easing: kind === 'pop' ? 'cubic-bezier(.16,1,.3,1)' : EASE, fill: 'backwards' });
     a.pause(); anims.set(el, a); io.observe(el);
     setTimeout(() => { if (a.playState === 'paused') { io.unobserve(el); a.play(); } }, 3000);
   };
@@ -231,7 +231,7 @@
     if (!el || el.closest('[role="dialog"][aria-label="Image viewer"]')) return;
     const r = el.getBoundingClientRect(); if (r.width > 700 || r.height > 400) return;
     const cs = getComputedStyle(el), pill = cs.borderRadius !== '0px' || cs.display.includes('flex') || el.tagName === 'BUTTON';
-    el.animate([{ scale: '1' }, { scale: '.95', offset: .35 }, { scale: '1' }], { duration: 420, easing: 'cubic-bezier(.3,1.4,.5,1)' });
+    el.animate([{ scale: '1' }, { scale: '.95', offset: .35 }, { scale: '1' }], { duration: 420, easing: 'cubic-bezier(.16,1,.3,1)' });
     if (!pill || el.tagName === 'IMG') return;
     const wrap = document.createElement('div');
     wrap.style.cssText = 'position:fixed;pointer-events:none;overflow:hidden;z-index:9998;left:' + r.left + 'px;top:' + r.top + 'px;width:' + r.width + 'px;height:' + r.height + 'px;border-radius:' + cs.borderRadius;
@@ -311,7 +311,7 @@
   const hero = () => {
     const words = [...document.querySelectorAll('[data-word]')];
     words.forEach((el, i) => once(el, () => el.animate([{ transform: 'translateY(110%) rotate(6deg)' }, { transform: 'none' }], { duration: 900, delay: 150 + i * 90, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' })));
-    document.querySelectorAll('[data-word-pop]').forEach(el => once(el, () => el.animate([{ opacity: 0, transform: 'rotate(-20deg) scale(.3)' }, { opacity: 1, transform: 'rotate(4deg) scale(1.12)', offset: .6 }, { opacity: 1, transform: 'rotate(-2.5deg) scale(1)' }], { duration: 800, delay: 150 + 3 * 90 + 120, easing: 'cubic-bezier(.3,1.3,.5,1)', fill: 'backwards' })));
+    document.querySelectorAll('[data-word-pop]').forEach(el => once(el, () => el.animate([{ opacity: 0, transform: 'rotate(-20deg) scale(.3)' }, { opacity: 1, transform: 'rotate(4deg) scale(1.12)', offset: .6 }, { opacity: 1, transform: 'rotate(-2.5deg) scale(1)' }], { duration: 800, delay: 150 + 3 * 90 + 120, easing: 'cubic-bezier(.16,1,.3,1)', fill: 'backwards' })));
   };
 
   // ---------- marquee ----------
@@ -370,7 +370,7 @@
     const reset = p => { p.style.rotate = ''; const im = p.querySelector('img'); if (im) im.style.scale = ''; };
     document.addEventListener('pointerover', e => {
       const im = e.target.closest && e.target.closest('img[data-lb]'); if (!im) return;
-      im.style.transition = 'scale .45s cubic-bezier(.3,1.4,.5,1), translate .45s cubic-bezier(.3,1.4,.5,1), box-shadow .45s';
+      im.style.transition = 'scale .45s cubic-bezier(.16,1,.3,1), translate .45s cubic-bezier(.16,1,.3,1), box-shadow .45s';
       im.style.scale = '1.04'; im.style.translate = '0 -6px';
     });
     document.addEventListener('pointerout', e => {

@@ -6,7 +6,7 @@
   const make = () => {
     if (card) return;
     card = document.createElement('a'); card.target = '_blank'; card.rel = 'noopener'; card.setAttribute('aria-hidden', 'true'); card.tabIndex = -1;
-    card.style.cssText = 'position:fixed;left:0;top:0;z-index:90;display:block;padding:4px;background:#fff;border-radius:14px;box-shadow:0 18px 40px -14px rgba(22,23,26,.45),0 0 0 1px rgba(22,23,26,.08);opacity:0;pointer-events:none;transform-origin:50% 100%;transition:opacity .18s,scale .3s cubic-bezier(.34,1.56,.64,1);scale:.7;font-size:0';
+    card.style.cssText = 'position:fixed;left:0;top:0;z-index:90;display:block;padding:4px;background:#fff;border-radius:14px;box-shadow:0 18px 40px -14px rgba(22,23,26,.45),0 0 0 1px rgba(22,23,26,.08);opacity:0;pointer-events:none;transform-origin:50% 100%;transition:opacity .18s,scale .3s cubic-bezier(.16,1,.3,1);scale:.7;font-size:0';
     img = new Image(); img.width = W; img.height = H; img.alt = '';
     img.style.cssText = 'display:block;border-radius:10px;background:#E9E5DA;width:' + W + 'px;height:' + H + 'px;object-fit:cover';
     img.onerror = () => close(true);
