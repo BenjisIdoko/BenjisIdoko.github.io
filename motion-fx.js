@@ -14,6 +14,7 @@
 .mx-nav{transition:background .35s,box-shadow .35s,backdrop-filter .35s,-webkit-backdrop-filter .35s}
 .mx-nav.mx-solid{background:rgba(244,242,236,.82)!important;-webkit-backdrop-filter:blur(22px) saturate(1.7);backdrop-filter:blur(22px) saturate(1.7);box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 16px 36px -18px rgba(22,23,26,.45)}
 .mx-mag{transition:translate .35s ${EASE}}
+@media (max-width:760px){body:has(#contact) .mx-top{display:none}}
 @media (prefers-reduced-motion:reduce){.mx-top,.mx-nav,.mx-mag{transition:none}}`;
   document.head.appendChild(st);
 
@@ -63,7 +64,7 @@
   // case study chapter rail
   let rail;
   const mkRail = () => {
-    if (rail || document.getElementById('work') || innerWidth < 1280) return;
+    if (rail || document.getElementById('work') || innerWidth < 1500) return;
     const hs = [...document.querySelectorAll('main h2')]; if (hs.length < 3) return;
     rail = document.createElement('nav'); rail.setAttribute('aria-label', 'Chapters');
     rail.style.cssText = 'position:fixed;left:18px;top:50%;translate:0 -50%;z-index:30;display:flex;flex-direction:column;gap:4px;padding:10px 8px;border-radius:999px;background:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.7);-webkit-backdrop-filter:blur(16px) saturate(1.6);backdrop-filter:blur(16px) saturate(1.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 10px 30px -14px rgba(22,23,26,.35)';
@@ -81,7 +82,7 @@
   const railUpdate = () => {
     if (!rail) return; let act = -1;
     [...rail.children].forEach((b, i) => { if (b.__h.getBoundingClientRect().top < innerHeight * .4) act = i; });
-    [...rail.children].forEach((b, i) => { const d = b.firstChild; d.style.opacity = i === act ? 1 : .3; d.style.background = i === act ? '#2B4AA0' : '#16171A'; d.style.transform = i === act ? 'scale(1.7)' : 'scale(1)'; });
+    [...rail.children].forEach((b, i) => { const d = b.firstChild; b.setAttribute('aria-current', i === act ? 'true' : 'false'); d.style.opacity = i === act ? 1 : .3; d.style.background = i === act ? '#2B4AA0' : '#16171A'; d.style.transform = i === act ? 'scale(1.7)' : 'scale(1)'; });
   };
 
   // mobile glass contact bar (home)
