@@ -131,11 +131,15 @@ header [data-inspect-toggle]::after,header a.scp2::after{inset:-5px -4px}
 .wk-result{margin:0;color:#3C3E43;font-size:16px;line-height:1.5}
 .wk-chips{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0}
 .wk-chips li{font:500 13px "Hanken Grotesk";color:#16171A;background:rgba(22,23,26,.06);padding:5px 11px;border-radius:999px}
-.wk-stack{margin:0;font:400 12px "Spline Sans Mono";color:#5F6166;letter-spacing:.03em}
 .wk-foot{margin-top:auto;padding-top:8px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .wk-more{font:500 14px "Hanken Grotesk";color:#2B4AA0}
 .wk-more b{display:inline-block;font-weight:500;transition:transform .2s cubic-bezier(.2,.7,.2,1)}
 .wk-card:hover .wk-more b{transform:translateX(3px)}
+.wk-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:0 14px}
+.wk-case{position:relative;z-index:1;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font:600 14px "Hanken Grotesk";color:#2B4AA0;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
+.wk-case:hover{color:#16171A}
+.wk-dialog dt{color:#2B4AA0!important}
+.wk-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .wk-live{position:relative;z-index:1;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font:500 14px "Hanken Grotesk";color:#16171A;text-decoration:none}
 .wk-live:hover{color:#2B4AA0}
 .wk-card[data-featured]{grid-column:1/-1;flex-direction:row}
@@ -257,6 +261,7 @@ dl[data-glow] dt{font-size:12px!important;line-height:1.35!important;overflow-wr
 <button aria-pressed="false" data-filter="own" style='font: 500 14px "Hanken Grotesk"; white-space: nowrap; flex-shrink: 0; display: inline-flex; gap: 6px; padding: 9px 16px; border-radius: 999px; cursor: pointer; min-height: 44px; box-sizing: border-box; align-items: center; border: 1px solid rgb(207, 202, 191); background: transparent; color: rgb(22, 23, 26);'>Own product <span style="opacity: 0.55;">1</span></button>
 </div>
 </div>
+<p class="wk-sr" role="status" aria-live="polite" id="wk-status"></p>
 <div class="wk-grid" data-view="all">
 <article class="wk-card" data-show="cng" data-featured="" id="cng-connect">
 <div class="wk-media"><img src="assets/live/cng.webp" alt="The CNG-Connect app homepage" width="1440" height="900" loading="lazy"></div>
@@ -265,8 +270,7 @@ dl[data-glow] dt{font-size:12px!important;line-height:1.35!important;overflow-wr
 <h3 class="wk-title"><button type="button" data-open-dialog="dlg-cng" aria-haspopup="dialog">Helping drivers find gas before they join the queue</button></h3>
 <p class="wk-result">Live with drivers: a crowd-reported station map across 28 states and 451 accredited workshops.</p>
 <ul class="wk-chips"><li>28 states</li><li>451 workshops</li></ul>
-<p class="wk-stack">React · TypeScript · Supabase</p>
-<div class="wk-foot"><span class="wk-more" aria-hidden="true">View details <b>→</b></span><a class="wk-live" href="https://cng-connect.vercel.app" target="_blank" rel="noopener" aria-label="Open the live app (opens in a new tab)">Open the live app ↗</a></div>
+<div class="wk-foot"><span class="wk-more" aria-hidden="true">View details <b>→</b></span><div class="wk-links"><a class="wk-case" href="cng-connect.html">Read case study</a><a class="wk-live" href="https://cng-connect.vercel.app" target="_blank" rel="noopener" aria-label="Open the live app (opens in a new tab)">Open the live app ↗</a></div></div>
 </div>
 </article>
 <article class="wk-card" data-show="pf" id="payforce">
@@ -276,8 +280,7 @@ dl[data-glow] dt{font-size:12px!important;line-height:1.35!important;overflow-wr
 <h3 class="wk-title"><button type="button" data-open-dialog="dlg-pf" aria-haspopup="dialog">A banking app for agents and merchants</button></h3>
 <p class="wk-result">Redesigned the entire UI. The in-house team built it, and it's now Payforce by FairMoney.</p>
 <ul class="wk-chips"><li>Contract designer</li><li>Mentored 2 interns</li></ul>
-<p class="wk-stack">KYC tiers · Transfers · Bill payments · POS · Receipts</p>
-<div class="wk-foot"><span class="wk-more" aria-hidden="true">View details <b>→</b></span><a class="wk-live" href="https://fairmoney.io/" target="_blank" rel="noopener" aria-label="FairMoney (opens in a new tab)">FairMoney ↗</a></div>
+<div class="wk-foot"><span class="wk-more" aria-hidden="true">View details <b>→</b></span><div class="wk-links"><a class="wk-live" href="https://fairmoney.io/" target="_blank" rel="noopener" aria-label="FairMoney (opens in a new tab)">FairMoney ↗</a></div></div>
 </div>
 </article>
 <article class="wk-card" data-show="unitora" id="unitora">
@@ -287,8 +290,7 @@ dl[data-glow] dt{font-size:12px!important;line-height:1.35!important;overflow-wr
 <h3 class="wk-title"><button type="button" data-open-dialog="dlg-unitora" aria-haspopup="dialog">Making property investment feel as safe as a bank</button></h3>
 <p class="wk-result">A fractional real-estate platform where one design system runs both the public site and the investor portal.</p>
 <ul class="wk-chips"><li>120 investor accounts</li><li>180 investment records</li></ul>
-<p class="wk-stack">WordPress · Bricks · PHP</p>
-<div class="wk-foot"><span class="wk-more" aria-hidden="true">View details <b>→</b></span><a class="wk-live" href="https://useunitora.com" target="_blank" rel="noopener" aria-label="useunitora.com (opens in a new tab)">useunitora.com ↗</a></div>
+<div class="wk-foot"><span class="wk-more" aria-hidden="true">View details <b>→</b></span><div class="wk-links"><a class="wk-case" href="unitora.html">Read case study</a><a class="wk-live" href="https://useunitora.com" target="_blank" rel="noopener" aria-label="useunitora.com (opens in a new tab)">useunitora.com ↗</a></div></div>
 </div>
 </article>
 <article class="wk-card" data-show="nj" id="nigerian-jollof-nyc">
@@ -298,8 +300,7 @@ dl[data-glow] dt{font-size:12px!important;line-height:1.35!important;overflow-wr
 <h3 class="wk-title"><button type="button" data-open-dialog="dlg-nj" aria-haspopup="dialog">Putting a caterer's real menu online</button></h3>
 <p class="wk-result">Every dish has accurate tray-size pricing, and customers pick protein and spice level without extra steps.</p>
 <ul class="wk-chips"><li>Catalogue rebuilt</li><li>Custom plugin</li><li>FluentCart</li></ul>
-<p class="wk-stack">Storefront design · Ecommerce</p>
-<div class="wk-foot"><span class="wk-more" aria-hidden="true">View details <b>→</b></span><a class="wk-live" href="https://nigerianjollofnyc.com" target="_blank" rel="noopener" aria-label="nigerianjollofnyc.com (opens in a new tab)">nigerianjollofnyc.com ↗</a></div>
+<div class="wk-foot"><span class="wk-more" aria-hidden="true">View details <b>→</b></span><div class="wk-links"><a class="wk-live" href="https://nigerianjollofnyc.com" target="_blank" rel="noopener" aria-label="nigerianjollofnyc.com (opens in a new tab)">nigerianjollofnyc.com ↗</a></div></div>
 </div>
 </article>
 <article class="wk-card" data-show="hr" id="church-hr-manager">
@@ -309,8 +310,7 @@ dl[data-glow] dt{font-size:12px!important;line-height:1.35!important;overflow-wr
 <h3 class="wk-title"><button type="button" data-open-dialog="dlg-hr" aria-haspopup="dialog">Proving volunteers are on site before they clock in</button></h3>
 <p class="wk-result">Attendance moved out of Google Sheets: 144 workers clock in by GPS, kiosk or QR pass across 38 teams.</p>
 <ul class="wk-chips"><li>144 workers</li><li>38 teams</li></ul>
-<p class="wk-stack">Geofenced clock-in · Kiosk · Digital passes</p>
-<div class="wk-foot"><span class="wk-more" aria-hidden="true">View details <b>→</b></span><a class="wk-live" href="https://ttcushafa.vercel.app" target="_blank" rel="noopener" aria-label="ttcushafa.vercel.app (opens in a new tab)">ttcushafa.vercel.app ↗</a></div>
+<div class="wk-foot"><span class="wk-more" aria-hidden="true">View details <b>→</b></span><div class="wk-links"><a class="wk-live" href="https://ttcushafa.vercel.app" target="_blank" rel="noopener" aria-label="ttcushafa.vercel.app (opens in a new tab)">ttcushafa.vercel.app ↗</a></div></div>
 </div>
 </article>
 </div>

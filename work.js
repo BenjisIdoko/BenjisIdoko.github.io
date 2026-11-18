@@ -17,6 +17,15 @@
   });
   // let the featured layout know which filter is active
   document.querySelectorAll('[data-filter]').forEach(chip => {
-    chip.addEventListener('click', () => { if (grid) grid.dataset.view = chip.dataset.filter; });
+    chip.addEventListener('click', () => {
+      if (!grid) return;
+      grid.dataset.view = chip.dataset.filter;
+      const status = document.getElementById('wk-status');
+      if (status) {
+        const shown = grid.querySelectorAll('.wk-card:not([hidden])').length;
+        const total = grid.querySelectorAll('.wk-card').length;
+        status.textContent = 'Showing ' + shown + ' of ' + total + ' projects';
+      }
+    });
   });
 })();
