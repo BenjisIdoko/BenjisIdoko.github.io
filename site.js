@@ -26,8 +26,8 @@
     chips.forEach(c => {
       const on = c === chip;
       c.setAttribute('aria-pressed', String(on));
-      c.style.background = on ? '#16171A' : 'transparent';
-      c.style.color = on ? '#F4F2EC' : '#16171A';
+      c.style.background = on ? 'var(--ink)' : 'var(--glass-tint)';
+      c.style.color = on ? 'var(--paper)' : 'var(--ink)';
     });
     $$('[data-show]').forEach(el => { el.hidden = !groups[f].includes(el.dataset.show); });
   }));
@@ -63,8 +63,8 @@
     tabs.forEach(t => {
       const on = +t.dataset.pick === a;
       t.setAttribute('aria-pressed', String(on));
-      t.style.borderColor = on ? '#16171A' : '#DDD8CD';
-      t.style.background = on ? '#fff' : 'transparent';
+      t.style.borderColor = on ? 'var(--ink)' : 'var(--rule)';
+      t.style.background = on ? 'var(--glass-strong)' : 'var(--glass-tint)';
     });
   };
   picks.forEach(el => el.addEventListener('click', () => pick(+el.dataset.pick)));
