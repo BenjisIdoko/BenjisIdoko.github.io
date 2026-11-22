@@ -30,7 +30,7 @@
 .gf-root[data-tone=dark] .gf-sheet{background:#26282D;color:#F4F2EC}
 a.gf-sheet{cursor:pointer}
 .gf-root[data-open] .gf-sheet:hover,.gf-root[data-open] .gf-sheet:focus-visible{transform:translate(calc(var(--gf-jx) + var(--gf-slot)*var(--gf-spread)),calc(var(--gf-lift) + var(--gf-depth)*var(--gf-stack)*-1 - 16px)) rotate(calc(var(--gf-slot)*var(--gf-fan)*.6));box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 0 0 .5px rgba(0,0,0,.1),0 22px 40px -12px rgba(10,12,20,.42);transition-delay:0s}
-.gf-sheet:focus-visible{outline:2px solid #2B4AA0;outline-offset:2px}
+.gf-sheet:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .gf-pic{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
 .gf-sheet--pic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.5),transparent 40%);pointer-events:none}
 .gf-head{position:absolute;left:14px;right:14px;top:11px;z-index:1;display:flex;align-items:baseline;justify-content:space-between;gap:10px;white-space:nowrap}
@@ -153,7 +153,6 @@ a.gf-sheet{cursor:pointer}
 
   const scan = () => {
     if (ready) document.querySelectorAll('[data-gfolder]').forEach(build);
-    document.querySelectorAll('#main h2, #work h3, #experience h3').forEach(h => { if (!done.has(h) && !reduced) { done.add(h); hio.observe(h); } });
     document.querySelectorAll('button[aria-controls^="dec-"]').forEach(b => b.classList.add('gl-btn'));
   };
   let q = false;

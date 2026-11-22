@@ -1,7 +1,7 @@
 (() => {
   if (window.__bieFx) return; window.__bieFx = true;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const ACC = '#2B4AA0', MONO = "'Spline Sans Mono',ui-monospace,monospace";
+  const ACC = 'var(--accent)', MONO = "'Spline Sans Mono',ui-monospace,monospace";
 
   // ---------- clock + pulse ----------
   const fmt = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Lagos' });
@@ -133,7 +133,7 @@
 ;(() => {
   if (window.__bieMotion) return; window.__bieMotion = true;
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const EASE = 'cubic-bezier(.2,.75,.2,1)', ACC = '#2B4AA0';
+  const EASE = 'cubic-bezier(.2,.75,.2,1)', ACC = 'var(--accent)';
 
   // scroll progress
   const bar = document.createElement('div');
@@ -157,16 +157,16 @@
     ['ol[id^="dec-"] > li', 'side']
   ];
   const frames = {
-    up: [{ opacity: 0, transform: 'translateY(32px)' }, { opacity: 1, transform: 'translateY(0)' }],
-    side: [{ opacity: 0, transform: 'translateX(-18px)' }, { opacity: 1, transform: 'translateX(0)' }],
-    pop: [{ opacity: 0, transform: 'translateY(12px) scale(.85)' }, { opacity: 1, transform: 'translateY(0) scale(1)' }],
-    portrait: [{ opacity: 0, transform: 'translateY(60px) rotate(9deg) scale(.94)' }, { opacity: 1, transform: 'rotate(2.5deg)' }]
+    up: [{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }],
+    side: [{ opacity: 0, transform: 'translateX(-8px)' }, { opacity: 1, transform: 'translateX(0)' }],
+    pop: [{ opacity: 0 }, { opacity: 1 }],
+    portrait: [{ opacity: 0, transform: 'translateY(16px) rotate(2.5deg)' }, { opacity: 1, transform: 'rotate(2.5deg)' }]
   };
   let batch = [], flushQ = false;
   const flush = () => {
     flushQ = false;
     batch.sort((a, b) => { const r = a.getBoundingClientRect(), s = b.getBoundingClientRect(); return r.top - s.top || r.left - s.left; });
-    batch.forEach((el, i) => { const a = anims.get(el); if (!a) return; a.effect.updateTiming({ delay: Math.min(i, 6) * 90 }); a.play(); });
+    batch.forEach((el, i) => { const a = anims.get(el); if (!a) return; a.effect.updateTiming({ delay: Math.min(i, 4) * 50 }); a.play(); });
     batch = [];
   };
   const io = new IntersectionObserver(es => es.forEach(e => {
@@ -175,7 +175,7 @@
   }), { rootMargin: '0px 0px -8% 0px' });
   const prep = (el, kind) => {
     if (seen.has(el)) return; seen.add(el);
-    const a = el.animate(frames[kind], { duration: kind === 'portrait' ? 1200 : 850, easing: kind === 'pop' ? 'cubic-bezier(.16,1,.3,1)' : EASE, fill: 'backwards' });
+    const a = el.animate(frames[kind], { duration: 500, easing: EASE, fill: 'backwards' });
     a.pause(); anims.set(el, a); io.observe(el);
     setTimeout(() => { if (a.playState === 'paused') { io.unobserve(el); a.play(); } }, 3000);
   };
@@ -184,7 +184,7 @@
   const cio = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return; cio.unobserve(e.target);
     const t = [...e.target.childNodes].find(n => n.nodeType === 3 && /\d/.test(n.nodeValue)); if (!t) return;
-    const end = parseInt(t.nodeValue, 10), t0 = performance.now(), D = 1400;
+    const end = parseInt(t.nodeValue, 10), t0 = performance.now(), D = 900;
     const step = now => { const k = Math.min((now - t0) / D, 1); t.nodeValue = String(Math.round(end * (1 - Math.pow(1 - k, 3)))); if (k < 1) requestAnimationFrame(step); };
     t.nodeValue = '0'; setTimeout(() => requestAnimationFrame(step), 200);
   }), { rootMargin: '0px 0px -10% 0px' });
@@ -232,6 +232,7 @@
     const r = el.getBoundingClientRect(); if (r.width > 700 || r.height > 400) return;
     const cs = getComputedStyle(el), pill = cs.borderRadius !== '0px' || cs.display.includes('flex') || el.tagName === 'BUTTON';
     el.animate([{ scale: '1' }, { scale: '.95', offset: .35 }, { scale: '1' }], { duration: 420, easing: 'cubic-bezier(.16,1,.3,1)' });
+    return; // press feedback only; no ripple
     if (!pill || el.tagName === 'IMG') return;
     const wrap = document.createElement('div');
     wrap.style.cssText = 'position:fixed;pointer-events:none;overflow:hidden;z-index:9998;left:' + r.left + 'px;top:' + r.top + 'px;width:' + r.width + 'px;height:' + r.height + 'px;border-radius:' + cs.borderRadius;
@@ -248,44 +249,10 @@
 ;(() => {
   if (window.__bieMotion2) return; window.__bieMotion2 = true;
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const EASE = 'cubic-bezier(.2,.75,.2,1)', INK = '#16171A', ACC = '#2B4AA0';
+  const EASE = 'cubic-bezier(.2,.75,.2,1)', INK = '#16171A', ACC = 'var(--accent)';
   const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
   const done = new WeakSet();
   const once = (el, fn) => { if (!done.has(el)) { done.add(el); fn(el); } };
-
-  // ---------- page transition ----------
-  const KEY = 'bie-transition';
-  const curtain = (label) => {
-    const c = document.createElement('div');
-    c.setAttribute('aria-hidden', 'true');
-    c.style.cssText = 'position:fixed;inset:0;z-index:10000;background:' + INK + ';color:#F4F2EC;display:flex;align-items:flex-end;padding:clamp(24px,5vw,64px);box-sizing:border-box;pointer-events:none';
-    c.innerHTML = '<div style="display:flex;flex-direction:column;gap:12px"><span style="font:12px Spline Sans Mono,monospace;letter-spacing:.08em;text-transform:uppercase;color:#8FA6E8">Opening</span><span style="font:600 clamp(40px,7vw,96px)/.95 Familjen Grotesk,sans-serif;letter-spacing:-.045em">' + (label || '') + '</span></div>';
-    document.body.appendChild(c); return c;
-  };
-  try {
-    const t = sessionStorage.getItem(KEY);
-    if (t) {
-      sessionStorage.removeItem(KEY);
-      const go = () => { const c = curtain(t); c.querySelector('div').animate([{ opacity: 1 }, { opacity: 0 }], { duration: 300, fill: 'forwards' });
-        c.animate([{ clipPath: 'inset(0 0 0 0)' }, { clipPath: 'inset(0 0 100% 0)' }], { duration: 800, delay: 150, easing: 'cubic-bezier(.75,0,.2,1)', fill: 'forwards' }).onfinish = () => c.remove(); };
-      document.body ? go() : addEventListener('DOMContentLoaded', go);
-    }
-  } catch (e) {}
-  document.addEventListener('click', e => {
-    const a = e.target.closest && e.target.closest('a[href]');
-    if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || a.target === '_blank' || a.hasAttribute('download')) return;
-    const href = a.getAttribute('href'); if (!/\.dc\.html/i.test(href) && !/^(index|cng-connect|unitora)\.html/i.test(href)) return;
-    const url = new URL(href, location.href); if (url.pathname === location.pathname) return;
-    e.preventDefault();
-    const art = a.closest('article'), h = art && art.querySelector('h3');
-    let label = /portfolio|index/i.test(url.pathname) ? 'All work' : (art ? (art.querySelector('[style*="Spline"] span:nth-child(2)') || {}).textContent : '') || 'Case study';
-    try { sessionStorage.setItem(KEY, label); } catch (e) {}
-    const c = curtain(label);
-    c.animate([{ clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0 0 0 0)' }], { duration: 700, easing: 'cubic-bezier(.75,0,.2,1)', fill: 'forwards' });
-    c.querySelector('div').animate([{ opacity: 0, transform: 'translateY(40px)' }, { opacity: 1, transform: 'none' }], { duration: 500, delay: 300, easing: EASE, fill: 'backwards' });
-    setTimeout(() => { location.href = url.href; }, 820);
-  }, true);
-  addEventListener('pageshow', e => { if (e.persisted) document.querySelectorAll('body > div[aria-hidden][style*="z-index: 10000"]').forEach(n => n.remove()); });
 
   // ---------- smooth inertia scroll (disabled: native scrolling is faster to scan) ----------
   if (false && fine) {
@@ -310,8 +277,8 @@
   // ---------- hero words ----------
   const hero = () => {
     const words = [...document.querySelectorAll('[data-word]')];
-    words.forEach((el, i) => once(el, () => el.animate([{ transform: 'translateY(110%) rotate(6deg)' }, { transform: 'none' }], { duration: 900, delay: 150 + i * 90, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' })));
-    document.querySelectorAll('[data-word-pop]').forEach(el => once(el, () => el.animate([{ opacity: 0, transform: 'rotate(-20deg) scale(.3)' }, { opacity: 1, transform: 'rotate(4deg) scale(1.12)', offset: .6 }, { opacity: 1, transform: 'rotate(-2.5deg) scale(1)' }], { duration: 800, delay: 150 + 3 * 90 + 120, easing: 'cubic-bezier(.16,1,.3,1)', fill: 'backwards' })));
+    words.forEach((el, i) => once(el, () => el.animate([{ transform: 'translateY(60%)', opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 600, delay: 80 + i * 50, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' })));
+    document.querySelectorAll('[data-word-pop]').forEach(el => once(el, () => el.animate([{ opacity: 0, transform: 'rotate(-2.5deg) scale(.96)' }, { opacity: 1, transform: 'rotate(-2.5deg) scale(1)' }], { duration: 500, delay: 300, easing: 'cubic-bezier(.16,1,.3,1)', fill: 'backwards' })));
   };
 
   // ---------- marquee ----------
