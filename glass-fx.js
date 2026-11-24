@@ -12,10 +12,10 @@
 
   const css = `
 .gl-bg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;background:var(--paper)}
-.gl-bg__img{position:absolute;inset:-8%;width:116%;height:116%;background:url('assets/portrait.webp') 68% 22%/cover no-repeat;filter:blur(34px) saturate(1.35) contrast(1.04);opacity:.26;transform:scale(1.06);will-change:transform;transition:opacity .45s,filter .45s}
-:root[data-theme=dark] .gl-bg__img{opacity:.48;filter:blur(28px) saturate(1.45) contrast(1.08) brightness(.78)}
-.gl-bg__veil{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(110% 80% at 72% 18%,color-mix(in srgb,var(--paper) 54%,transparent),color-mix(in srgb,var(--paper) 88%,transparent) 72%),color-mix(in srgb,var(--paper) 64%,transparent);-webkit-backdrop-filter:blur(44px) saturate(1.7);backdrop-filter:blur(44px) saturate(1.7);transition:background .45s}
-:root[data-theme=dark] .gl-bg__veil{background:radial-gradient(115% 85% at 72% 20%,rgba(17,18,20,.44),rgba(17,18,20,.84) 70%),linear-gradient(180deg,rgba(17,18,20,.38),rgba(17,18,20,.78));-webkit-backdrop-filter:blur(48px) saturate(1.85);backdrop-filter:blur(48px) saturate(1.85)}
+.gl-bg__img{position:absolute;inset:-8%;width:116%;height:116%;background:url('assets/portrait.webp') 68% 22%/cover no-repeat;filter:blur(26px) saturate(1.5) contrast(1.06);opacity:.46;transform:scale(1.06);will-change:transform;transition:opacity .45s,filter .45s}
+:root[data-theme=dark] .gl-bg__img{opacity:.52;filter:blur(26px) saturate(1.5) contrast(1.08) brightness(.8)}
+.gl-bg__veil{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(115% 85% at 72% 20%,color-mix(in srgb,var(--paper) 34%,transparent),color-mix(in srgb,var(--paper) 76%,transparent) 72%),linear-gradient(180deg,color-mix(in srgb,var(--paper) 32%,transparent),color-mix(in srgb,var(--paper) 72%,transparent));-webkit-backdrop-filter:blur(42px) saturate(1.8);backdrop-filter:blur(42px) saturate(1.8);transition:background .45s}
+:root[data-theme=dark] .gl-bg__veil{background:radial-gradient(115% 85% at 72% 20%,rgba(17,18,20,.42),rgba(17,18,20,.82) 70%),linear-gradient(180deg,rgba(17,18,20,.36),rgba(17,18,20,.76));-webkit-backdrop-filter:blur(46px) saturate(1.85);backdrop-filter:blur(46px) saturate(1.85)}
 @media (prefers-reduced-transparency:reduce){.gl-bg{display:none!important}.gl-bg__veil{display:none!important}}
 .gf-mount{display:block;width:100%}
 .gf-root{--gf-px:0;--gf-py:0;--gf-sp:0;--gf-ease:cubic-bezier(.2,.8,.2,1);--gf-spring:cubic-bezier(.16,1,.3,1);--gf-hinge:0deg;--gf-lift:42px;--gf-spread:0px;--gf-fan:0deg;--gf-stack:15px;--gf-ink:#16171A;--gf-soft:#5F6166;position:relative;display:block;isolation:isolate;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
