@@ -11,7 +11,6 @@
   };
 
   const css = `
-.gl-blob{display:none!important;position:fixed;z-index:-1;border-radius:50%;filter:blur(70px);pointer-events:none;will-change:transform}
 .gf-mount{display:block;width:100%}
 .gf-root{--gf-px:0;--gf-py:0;--gf-sp:0;--gf-ease:cubic-bezier(.2,.8,.2,1);--gf-spring:cubic-bezier(.16,1,.3,1);--gf-hinge:0deg;--gf-lift:42px;--gf-spread:0px;--gf-fan:0deg;--gf-stack:15px;--gf-ink:#16171A;--gf-soft:#5F6166;position:relative;display:block;isolation:isolate;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
 .gf-root[data-tone=dark]{--gf-ink:#F4F2EC;--gf-soft:rgba(244,242,236,.66)}
@@ -64,13 +63,6 @@ a.gf-sheet{cursor:pointer}
 @media (prefers-reduced-motion:reduce){.gf-root *{transition-duration:0s!important;transition-delay:0s!important}}
 `;
   const st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
-
-  // ambient colour behind the glass, drifting with scroll
-  const blobs = [['#2B4AA0', .26, 520, '-8vw', '6vh'], ['#2E9E63', .2, 460, '70vw', '40vh'], ['#E9B866', .34, 560, '30vw', '75vh']].map(([c, o, s, x, y]) => {
-    const b = document.createElement('div'); b.className = 'gl-blob'; b.setAttribute('aria-hidden', 'true');
-    b.style.cssText = `left:${x};top:${y};width:${s}px;height:${s}px;background:radial-gradient(closest-side,${c},transparent);opacity:${o}`;
-    document.body.appendChild(b); return b;
-  });
 
   const done = new WeakSet();
   const esc = s => (s || '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -125,16 +117,10 @@ a.gf-sheet{cursor:pointer}
     folders.push(root); onScroll();
   };
 
-  // scroll: ambient drift, folder parallax and viewport peek, heading blur-in
+  // scroll: folder parallax and viewport peek, heading blur-in
   let tk = false;
   const update = () => {
     tk = false;
-    const y = scrollY, h = Math.max(1, document.documentElement.scrollHeight - innerHeight), p = y / h;
-    if (!reduced) {
-      blobs[0].style.transform = `translate(${(p * 30).toFixed(1)}vw,${(p * 60).toFixed(1)}vh) scale(${(1 + p * .4).toFixed(2)})`;
-      blobs[1].style.transform = `translate(${(-p * 40).toFixed(1)}vw,${(p * -30).toFixed(1)}vh)`;
-      blobs[2].style.transform = `translate(${(p * 20).toFixed(1)}vw,${(-p * 70).toFixed(1)}vh) scale(${(1.2 - p * .3).toFixed(2)})`;
-    }
     folders.forEach(root => {
       if (!root.isConnected) return;
       const r = root.getBoundingClientRect(), c = (r.top + r.height / 2) / innerHeight;
