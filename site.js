@@ -26,8 +26,6 @@
     chips.forEach(c => {
       const on = c === chip;
       c.setAttribute('aria-pressed', String(on));
-      c.style.background = on ? 'var(--ink)' : 'var(--glass-tint)';
-      c.style.color = on ? 'var(--paper)' : 'var(--ink)';
     });
     $$('[data-show]').forEach(el => { el.hidden = !groups[f].includes(el.dataset.show); });
   }));

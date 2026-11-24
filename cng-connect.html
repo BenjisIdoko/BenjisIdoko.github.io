@@ -110,7 +110,18 @@ footer#contact{background:color-mix(in srgb,var(--invert-bg) 82%,transparent)!im
 [aria-label="Site menu"]{background:color-mix(in srgb,var(--invert-bg) 86%,transparent)!important;-webkit-backdrop-filter:blur(32px) saturate(1.7);backdrop-filter:blur(32px) saturate(1.7)}
 [data-tk=row]{-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6);box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
 [data-tk=front]{background:linear-gradient(color-mix(in srgb,var(--accent-light) 72%,transparent),color-mix(in srgb,var(--accent) 64%,transparent) 40%,color-mix(in srgb,var(--accent-mid) 72%,transparent))!important;-webkit-backdrop-filter:blur(22px) saturate(1.7);backdrop-filter:blur(22px) saturate(1.7);box-shadow:inset 0 1px 0 var(--hi-35),0 36px 50px -28px color-mix(in srgb,var(--shade) 50%,transparent)!important}
-[data-filter],button.scp1{-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6)}
+/* Liquid & frosted glass buttons */
+.scp1,.scp2,.scp3,.theme-toggle,a[href*="cngconnect.com.ng"][style*="border-radius: 999px"]{-webkit-backdrop-filter:blur(24px) saturate(1.9)!important;backdrop-filter:blur(24px) saturate(1.9)!important;transition:transform .2s cubic-bezier(.2,.8,.2,1),background .25s,border-color .25s,box-shadow .25s,color .25s!important}
+.scp1,.theme-toggle{background:linear-gradient(180deg,color-mix(in srgb,var(--surface) 72%,transparent),color-mix(in srgb,var(--surface) 38%,transparent))!important;border:1px solid var(--rim)!important;color:var(--ink)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.92),inset 0 -1px 0 rgba(255,255,255,.28),0 8px 22px -8px color-mix(in srgb,var(--shade) 28%,transparent)!important}
+:root[data-theme=dark] :is(.scp1,.theme-toggle){background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,.06))!important;border-color:rgba(255,255,255,.22)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.32),inset 0 -1px 0 rgba(255,255,255,.08),0 10px 26px -10px rgba(0,0,0,.65)!important}
+.scp1:hover,.theme-toggle:hover{background:linear-gradient(180deg,color-mix(in srgb,var(--surface) 88%,transparent),color-mix(in srgb,var(--surface) 56%,transparent))!important;border-color:color-mix(in srgb,var(--accent) 55%,var(--rim))!important;color:var(--accent)!important;box-shadow:inset 0 1px 0 #fff,0 12px 28px -10px color-mix(in srgb,var(--accent) 32%,transparent)!important}
+:root[data-theme=dark] :is(.scp1,.theme-toggle):hover{background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,.11))!important;border-color:rgba(143,166,232,.55)!important;color:var(--accent)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 14px 30px -10px rgba(0,0,0,.8)!important}
+.scp2{background:linear-gradient(180deg,color-mix(in srgb,var(--accent-light) 82%,transparent),color-mix(in srgb,var(--accent) 72%,transparent))!important;border:1px solid color-mix(in srgb,#fff 38%,var(--accent))!important;color:#FEFDFB!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(0,0,0,.18),0 12px 28px -10px color-mix(in srgb,var(--accent) 60%,transparent)!important}
+:root[data-theme=dark] .scp2{background:linear-gradient(180deg,rgba(143,166,232,.42),rgba(58,93,191,.54))!important;border-color:rgba(195,210,255,.42)!important;color:#FEFDFB!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.48),inset 0 -1px 0 rgba(255,255,255,.12),0 14px 32px -10px rgba(20,38,92,.75)!important}
+.scp2:hover{background:linear-gradient(180deg,color-mix(in srgb,var(--accent-light) 92%,transparent),color-mix(in srgb,var(--accent-deep) 86%,transparent))!important;border-color:rgba(255,255,255,.65)!important;color:#fff!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 16px 34px -10px color-mix(in srgb,var(--accent) 75%,transparent)!important}
+.scp3{background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.07))!important;border:1px solid rgba(255,255,255,.28)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.38),inset 0 -1px 0 rgba(255,255,255,.08),0 10px 26px -10px rgba(0,0,0,.5)!important}
+.scp3:hover{background:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.14))!important;border-color:rgba(255,255,255,.55)!important}
+a[href*="cngconnect.com.ng"][style*="border-radius: 999px"]{background:linear-gradient(180deg,rgba(255,255,255,.88),rgba(244,242,236,.72))!important;border:1px solid rgba(255,255,255,.8)!important;color:#1d6b4f!important;box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 rgba(0,0,0,.1),0 12px 28px -10px rgba(0,0,0,.4)!important}
 main ol{background:var(--glass);border:1px solid var(--rim);border-radius:24px;padding:4px clamp(16px,3vw,28px)!important;-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);box-shadow:var(--glass-shadow)}
 main ol>li:first-child{border-top-color:transparent!important}
 main ol>li:last-child{border-bottom-color:transparent!important}
@@ -347,6 +358,6 @@ main ol>li:last-child{border-bottom-color:transparent!important}
 <script src="./motion-fx.js?v=8537e803" defer></script>
 <script src="./glass-fx.js?v=7d42f1c5" defer></script>
 <script src="./link-preview.js?v=dc71adf8" defer></script>
-<script src="./site.js?v=458e6850" defer></script>
+<script src="./site.js?v=8e53a2d6" defer></script>
 </body>
 </html>
