@@ -162,7 +162,6 @@ a.gf-sheet{cursor:pointer}
 
   const scan = () => {
     if (ready) document.querySelectorAll('[data-gfolder]').forEach(build);
-    document.querySelectorAll('button[aria-controls^="dec-"]').forEach(b => b.classList.add('gl-btn'));
   };
   let q = false;
   new MutationObserver(() => { if (!q) { q = true; requestAnimationFrame(() => { q = false; scan(); }); } }).observe(document.documentElement, { childList: true, subtree: true });
